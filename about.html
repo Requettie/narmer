@@ -3,189 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Narmer Financial | About Us</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>NARMER FINANCIAL | ABOUT</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-* { font-family: 'Inter', sans-serif; }
-:root { --navy: #0a1628; --gold: #c9a84c; --dark-blue: #0f2744; --light-navy: #132e4a; }
-.gradient-hero { background: linear-gradient(135deg, #0a1628 0%, #0f2744 40%, #1a3a5c 100%); }
-.gold-text { color: var(--gold); }
-.gold-bg { background-color: var(--gold); }
-.navy-bg { background-color: var(--navy); }
-.timeline-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--gold); position: absolute; left: -8px; top: 4px; }
-.team-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px -8px rgba(0,0,0,0.15); }
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>:root{--bg-primary:#0a0b1a;--bg-secondary:#10112e;--bg-card:#141538;--bg-hover:#1a1b4a;--amber:#ffb000;--green:#00c853;--red:#ff1744;--cyan:#00d4ff;--magenta:#ff2d95;--text-primary:#e8e8f0;--text-secondary:#7878a0;--text-dim:#484868;--border-color:#1e2050}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg-primary);color:var(--text-primary);font-family:'Inter',sans-serif}.mono{font-family:'JetBrains Mono',monospace}.amber{color:var(--amber)}.green{color:var(--green)}.red{color:var(--red)}.cyan{color:var(--cyan)}.magenta{color:var(--magenta)}.text-dim{color:var(--text-dim)}.text-secondary{color:var(--text-secondary)}.border-custom{border-color:var(--border-color)}.bg-card{background:var(--bg-card)}.bg-secondary{background:var(--bg-secondary)}.neon-border{border:1px solid var(--border-color);position:relative}.neon-border::after{content:'';position:absolute;inset:-1px;border:1px solid transparent;background:linear-gradient(135deg,var(--amber),transparent,var(--cyan)) border-box;-webkit-mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.3;transition:opacity .3s}.neon-border:hover::after{opacity:.8}.bracket-title{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--text-secondary);letter-spacing:2px}.bracket-title::before{content:'[';color:var(--amber)}.bracket-title::after{content:']';color:var(--amber)}.nav-link{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:all .2s}.nav-link:hover{color:var(--amber);border-bottom-color:var(--amber)}.nav-link.active{color:var(--amber);border-bottom-color:var(--amber)}.footer-link{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);text-decoration:none;transition:color .2s}.footer-link:hover{color:var(--amber)}.terminal-prompt::before{content:'> ';color:var(--amber)}.stat-card{background:var(--bg-card);border:1px solid var(--border-color);padding:20px;transition:all .2s}.stat-card:hover{background:var(--bg-hover);box-shadow:0 0 20px rgba(255,176,0,.15)}.timeline-node{position:relative;padding-left:32px;padding-bottom:32px;border-left:1px solid var(--border-color)}.timeline-node::before{content:'';position:absolute;left:-4px;top:0;width:8px;height:8px;background:var(--amber);border-radius:50%}.timeline-node:last-child{border-left:1px solid transparent}
+@keyframes fade-up{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
 </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body>
 
-<!-- Top Bar -->
-<div class="bg-[#060e1a] text-gray-300 text-sm py-2 px-6">
-  <div class="max-w-7xl mx-auto flex justify-between items-center">
-    <div class="flex gap-6">
-      <a href="#" class="hover:text-white">&#128179; Personal</a>
-      <a href="#" class="hover:text-white">&#128188; Business</a>
-      <a href="#" class="hover:text-white">&#128142; Wealth</a>
-    </div>
-    <div class="flex gap-4 items-center">
-      <span class="text-gold font-semibold">Routing #: 021000322</span>
-      <a href="#" class="gold-bg text-navy font-bold px-4 py-1 rounded text-xs hover:opacity-90">ONLINE BANKING</a>
-    </div>
+<div style="background:var(--bg-secondary);border-bottom:1px solid var(--border-color);padding:0 16px;">
+  <div class="mono" style="font-size:11px;color:var(--text-dim);letter-spacing:.5px;border-bottom:none;padding:6px 0;display:flex;align-items:center;gap:24px;">
+    <span class="amber">NARMER</span><span>NMS:BK</span><span class="green">&#9650; +2.34%</span><span style="flex:1"></span><span class="text-dim">06.15.2026</span><span>|</span><span class="text-dim">15:32:48 UTC</span><span>|</span><span class="amber">&#9679; LIVE</span>
   </div>
 </div>
 
-<!-- Main Navigation -->
-<nav class="navy-bg text-white sticky top-0 z-50 shadow-2xl border-b border-gray-800">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex justify-between items-center py-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div>
-        <div>
-          <div class="text-xl font-bold tracking-tight">NARMER</div>
-          <div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div>
-        </div>
-      </a>
-      <div class="hidden lg:flex space-x-8 font-medium text-sm">
-        <a href="index.html" class="hover:text-gold transition pb-1">Home</a>
-        <a href="about.html" class="gold-text border-b-2 border-gold pb-1">About</a>
-        <a href="services.html" class="hover:text-gold transition pb-1">Banking</a>
-        <a href="rates.html" class="hover:text-gold transition pb-1">Rates</a>
-        <a href="security.html" class="hover:text-gold transition pb-1">Security</a>
-        <a href="contact.html" class="hover:text-gold transition pb-1">Contact</a>
-      </div>
-      <a href="#" class="gold-bg text-navy font-bold px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition">Open Account</a>
+<div style="background:var(--bg-primary);border-bottom:1px solid var(--border-color);padding:12px 24px;">
+  <div style="max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:42px;height:42px;border:2px solid var(--amber);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:20px;color:var(--amber);">N</div>
+      <div><div class="mono" style="font-size:18px;font-weight:700;letter-spacing:3px;">NARMER</div><div style="display:flex;gap:12px;font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);"><span>NYSE:NMR</span><span>FDIC</span><span class="amber">&#9733; BLUE CHIP</span></div></div>
     </div>
+    <div style="text-align:right;font-family:'JetBrains Mono',monospace;"><div style="font-size:11px;color:var(--text-dim);">NYSE &#9650;</div><div style="font-size:20px;font-weight:700;color:var(--green);">$164.82</div><div style="font-size:12px;color:var(--green);">+$3.77 (+2.34%)</div></div>
   </div>
-</nav>
+</div>
 
-<!-- About Hero -->
-<section class="gradient-hero text-white py-20 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="max-w-3xl">
-      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">About Us</p>
-      <h1 class="text-5xl lg:text-7xl font-black mb-6">125 Years of <span class="gold-text">Financial Leadership</span></h1>
-      <p class="text-xl text-gray-300 leading-relaxed">Founded in 1897, Narmer Financial has grown from a single storefront in Boston to one of the largest and most trusted financial institutions in the United States.</p>
-    </div>
+<div style="border-bottom:1px solid var(--border-color);background:var(--bg-secondary);">
+  <div style="max-width:1400px;margin:0 auto;padding:0 24px;display:flex;gap:32px;align-items:center;height:44px;">
+    <a href="index.html" class="nav-link">MARKETS</a>
+    <a href="about.html" class="nav-link active">ABOUT</a>
+    <a href="services.html" class="nav-link">SERVICES</a>
+    <a href="rates.html" class="nav-link">RATES</a>
+    <a href="security.html" class="nav-link">SECURITY</a>
+    <a href="contact.html" class="nav-link">CONTACT</a>
+    <div style="flex:1"></div>
+    <a href="#" class="nav-link" style="color:var(--cyan);">&#128274; SECURE LOGIN</a>
   </div>
-</section>
+</div>
 
-<!-- Mission & Values -->
-<section class="py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid lg:grid-cols-3 gap-12 mb-24">
-      <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100">
-        <div class="text-4xl mb-4">&#128200;</div>
-        <h3 class="text-2xl font-bold mb-3">Our Mission</h3>
-        <p class="text-gray-600">To empower individuals, families, and businesses to achieve financial prosperity through trust, innovation, and personalized service.</p>
-      </div>
-      <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100">
-        <div class="text-4xl mb-4">&#128077;</div>
-        <h3 class="text-2xl font-bold mb-3">Our Values</h3>
-        <p class="text-gray-600">Integrity, accountability, community, and excellence drive every decision we make and every relationship we build.</p>
-      </div>
-      <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100">
-        <div class="text-4xl mb-4">&#127758;</div>
-        <h3 class="text-2xl font-bold mb-3">Our Impact</h3>
-        <p class="text-gray-600">$2.5B invested in community development, 1.2M hours of employee volunteer service, and a commitment to net-zero operations by 2040.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Timeline -->
-<section class="py-24 px-6 bg-gray-50">
-  <div class="max-w-4xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Our History</p>
-      <h2 class="text-4xl font-black text-navy mb-4">The Narmer Timeline</h2>
-    </div>
-    <div class="space-y-12">
-      <div class="relative pl-8 border-l-2 border-gold">
-        <div class="timeline-dot"></div>
-        <p class="text-sm gold-text font-bold">1897</p>
-        <h3 class="text-xl font-bold">The Beginning</h3>
-        <p class="text-gray-600">Alistair Narmer opens the Boston Savings & Trust Company in a small storefront on State Street with $15,000 in capital.</p>
-      </div>
-      <div class="relative pl-8 border-l-2 border-gold">
-        <div class="timeline-dot"></div>
-        <p class="text-sm gold-text font-bold">1929</p>
-        <h3 class="text-xl font-bold">The Great Depression</h3>
-        <p class="text-gray-600">While hundreds of banks failed, Narmer remained solvent by maintaining conservative lending practices and depositor confidence.</p>
-      </div>
-      <div class="relative pl-8 border-l-2 border-gold">
-        <div class="timeline-dot"></div>
-        <p class="text-sm gold-text font-bold">1972</p>
-        <h3 class="text-xl font-bold">National Expansion</h3>
-        <p class="text-gray-600">Narmer goes public on the NYSE and begins its expansion across the Eastern Seaboard, opening 200 branches in 15 states.</p>
-      </div>
-      <div class="relative pl-8 border-l-2 border-gold">
-        <div class="timeline-dot"></div>
-        <p class="text-sm gold-text font-bold">2004</p>
-        <h3 class="text-xl font-bold">Digital Revolution</h3>
-        <p class="text-gray-600">Launch of Narmer Online Banking, becoming one of the first major banks to offer full digital account management.</p>
-      </div>
-      <div class="relative pl-8 border-l-2 border-gold">
-        <div class="timeline-dot"></div>
-        <p class="text-sm gold-text font-bold">2026</p>
-        <h3 class="text-xl font-bold">Today & Beyond</h3>
-        <p class="text-gray-600">Serving 15 million customers across 4,200 branches with $220B in assets, Narmer continues to lead with AI-driven banking and wealth management innovation.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Leadership -->
-<section class="py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Leadership</p>
-      <h2 class="text-4xl font-black text-navy mb-4">Our Executive Team</h2>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center transition">
-        <div class="w-24 h-24 bg-navy rounded-full mx-auto mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover" /></div>
-        <h4 class="font-bold text-lg">Alistair Narmer IV</h4>
-        <p class="text-sm gold-text font-semibold">Chairman & CEO</p>
-        <p class="text-xs text-gray-500 mt-2">40 years of banking leadership</p>
-      </div>
-      <div class="team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center transition">
-        <div class="w-24 h-24 bg-navy rounded-full mx-auto mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover" /></div>
-        <h4 class="font-bold text-lg">Catherine Walsh</h4>
-        <p class="text-sm gold-text font-semibold">President & COO</p>
-        <p class="text-xs text-gray-500 mt-2">Former Treasury Undersecretary</p>
-      </div>
-      <div class="team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center transition">
-        <div class="w-24 h-24 bg-navy rounded-full mx-auto mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover" /></div>
-        <h4 class="font-bold text-lg">James Hartfield</h4>
-        <p class="text-sm gold-text font-semibold">CFO</p>
-        <p class="text-xs text-gray-500 mt-2">25 years in institutional finance</p>
-      </div>
-      <div class="team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center transition">
-        <div class="w-24 h-24 bg-navy rounded-full mx-auto mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover" /></div>
-        <h4 class="font-bold text-lg">Dr. Maria Santos</h4>
-        <p class="text-sm gold-text font-semibold">CTO</p>
-        <p class="text-xs text-gray-500 mt-2">AI & Digital Transformation leader</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="navy-bg text-gray-400 py-16 px-6 border-t border-gray-800">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<section style="padding:60px 24px;border-bottom:1px solid var(--border-color);">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
       <div>
-        <div class="flex items-center gap-3 mb-6">
-          <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div>
-          <div><div class="text-xl font-bold text-white">NARMER</div><div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div></div>
+        <div class="bracket-title" style="margin-bottom:20px;">CORPORATE PROFILE</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;line-height:1.2;margin-bottom:24px;">125 YEARS OF<br><span class="amber">MARKET DISCIPLINE</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-secondary);line-height:1.8;margin-bottom:32px;">
+          Narmer Financial Holdings Inc. (NYSE: NMR) is a diversified financial services holding company headquartered in Boston, Massachusetts. Founded in 1897, we operate across 31 countries with $220.4 billion in total assets and 63,000 employees.
         </div>
-        <p class="text-sm">Member FDIC. Equal Housing Lender. &copy; 2026 Narmer Financial.</p>
+        <div class="terminal-prompt" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);padding:16px;background:var(--bg-card);border-left:2px solid var(--amber);">
+          "We measure our success not in quarterly earnings, but in generational relationships built on trust."
+        </div>
       </div>
-      <div class="footer-links"><h4 class="text-white font-bold mb-4">Personal</h4><div class="flex flex-col gap-2 text-sm"><a href="#">Checking</a><a href="#">Savings</a><a href="#">Credit Cards</a><a href="#">Mortgages</a><a href="#">Auto Loans</a></div></div>
-      <div class="footer-links"><h4 class="text-white font-bold mb-4">Business</h4><div class="flex flex-col gap-2 text-sm"><a href="#">Business Checking</a><a href="#">Merchant Services</a><a href="#">Commercial Lending</a><a href="#">Payroll</a><a href="#">Treasury Management</a></div></div>
-      <div class="footer-links"><h4 class="text-white font-bold mb-4">Support</h4><div class="flex flex-col gap-2 text-sm"><a href="contact.html">Contact Us</a><a href="#">Lost/Stolen Card</a><a href="#">Dispute a Transaction</a><a href="#">Branch Locator</a><a href="#">Privacy Policy</a></div></div>
+      <div class="neon-border" style="background:var(--bg-card);padding:24px;">
+        <div class="bracket-title" style="font-size:11px;margin-bottom:20px;">KEY STATISTICS</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div><div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);">MARKET CAP</div><div style="font-size:24px;font-weight:700;color:var(--amber);">$48.2B</div></div>
+          <div><div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);">SECTOR</div><div style="font-size:24px;font-weight:700;color:var(--cyan);">FINANCIAL</div></div>
+          <div><div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);">FOUNDED</div><div style="font-size:24px;font-weight:700;color:var(--green);">1897</div></div>
+          <div><div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);">EXCHANGE</div><div style="font-size:24px;font-weight:700;color:var(--magenta);">NYSE</div></div>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<section style="padding:60px 24px;border-bottom:1px solid var(--border-color);">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div class="bracket-title" style="margin-bottom:40px;">CORPORATE TIMELINE</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 48px;">
+      <div>
+        <div class="timeline-node"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);">1897</span><h3 style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;margin:4px 0;">Boston Savings & Trust</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">Alistair Narmer opens a single storefront on State Street with $15,000 in capital.</p></div>
+        <div class="timeline-node"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);">1929</span><h3 style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;margin:4px 0;">The Great Depression</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">Narmer remains solvent through conservative lending. Depositor confidence never wavers.</p></div>
+        <div class="timeline-node"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);">1954</span><h3 style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;margin:4px 0;">IPO on NYSE</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">Narmer goes public under ticker NMR. Offering oversubscribed 4x.</p></div>
+        <div class="timeline-node"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);">1972</span><h3 style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;margin:4px 0;">National Expansion</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">200 branches across 15 states. Total assets surpass $10B.</p></div>
+      </div>
+      <div>
+        <div class="timeline-node"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);">1999</span><h3 style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;margin:4px 0;">Digital Banking Launch</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">First major bank to offer full online account management.</p></div>
+        <div class="timeline-node"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);">2008</span><h3 style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;margin:4px 0;">Financial Crisis</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">Narmer acquires three failing institutions. Government repays TARP in full.</p></div>
+        <div class="timeline-node"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);">2018</span><h3 style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;margin:4px 0;">AI & Machine Learning</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">Launch of Narmer AI fraud detection system. 2M+ transactions analyzed daily.</p></div>
+        <div class="timeline-node"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);">2026</span><h3 style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;margin:4px 0;">Today</h3><p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);">15M customers, $220B assets, ESG leader, net-zero target 2040.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:60px 24px;">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div class="bracket-title" style="margin-bottom:40px;">EXECUTIVE COMMITTEE</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+      <div class="stat-card neon-border" style="text-align:center;padding:24px;">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--bg-secondary);margin:0 auto 12px;overflow:hidden;border:2px solid var(--amber);"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" style="width:100%;height:100%;object-fit:cover;" /></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;">A. NARMER IV</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);letter-spacing:1px;">CHAIRMAN & CEO</div>
+      </div>
+      <div class="stat-card neon-border" style="text-align:center;padding:24px;">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--bg-secondary);margin:0 auto 12px;overflow:hidden;border:2px solid var(--cyan);"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" style="width:100%;height:100%;object-fit:cover;" /></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;">C. WALSH</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cyan);letter-spacing:1px;">PRESIDENT & COO</div>
+      </div>
+      <div class="stat-card neon-border" style="text-align:center;padding:24px;">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--bg-secondary);margin:0 auto 12px;overflow:hidden;border:2px solid var(--green);"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&q=80" style="width:100%;height:100%;object-fit:cover;" /></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;">J. HARTFIELD</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--green);letter-spacing:1px;">CFO</div>
+      </div>
+      <div class="stat-card neon-border" style="text-align:center;padding:24px;">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--bg-secondary);margin:0 auto 12px;overflow:hidden;border:2px solid var(--magenta);"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=80" style="width:100%;height:100%;object-fit:cover;" /></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;">M. SANTOS</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--magenta);letter-spacing:1px;">CTO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="border-top:1px solid var(--border-color);padding:48px 24px;">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;">
+      <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><div style="width:32px;height:32px;border:1.5px solid var(--amber);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:16px;color:var(--amber);">N</div><div class="mono" style="font-size:14px;font-weight:700;letter-spacing:2px;">NARMER</div></div><div class="mono" style="font-size:11px;color:var(--text-dim);line-height:1.8;">Member FDIC. Equal Housing Lender.<br>&copy; 2026 Narmer Financial Holdings Inc.<br>NYSE: NMR | CUSIP: 63123X102</div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--amber);margin-bottom:16px;letter-spacing:1px;">PERSONAL</div><div style="display:flex;flex-direction:column;gap:8px;"><a href="#" class="footer-link">Checking</a><a href="#" class="footer-link">Savings</a><a href="#" class="footer-link">Credit Cards</a><a href="#" class="footer-link">Mortgages</a></div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--amber);margin-bottom:16px;letter-spacing:1px;">INSTITUTIONAL</div><div style="display:flex;flex-direction:column;gap:8px;"><a href="#" class="footer-link">Business Banking</a><a href="#" class="footer-link">Merchant Services</a><a href="#" class="footer-link">Commercial Lending</a></div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--amber);margin-bottom:16px;letter-spacing:1px;">SUPPORT</div><div style="display:flex;flex-direction:column;gap:8px;"><a href="contact.html" class="footer-link">Contact</a><a href="security.html" class="footer-link">Security</a><a href="#" class="footer-link">Privacy Policy</a></div></div>
+    </div>
+    <div style="padding-top:24px;border-top:1px solid var(--border-color);display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);"><span>RTE: 021000322 | SWIFT: NARMUS33 | NMLS #412245</span><span>DATA DELAYED 15 MIN | &copy; 2026 NARMER FINANCIAL</span></div>
   </div>
 </footer>
 </body>

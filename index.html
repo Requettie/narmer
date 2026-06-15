@@ -3,306 +3,485 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Narmer Financial | Banking & Wealth Management</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>NARMER FINANCIAL | NMS:BK</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-* { font-family: 'Inter', sans-serif; }
-:root { --navy: #0a1628; --gold: #c9a84c; --dark-blue: #0f2744; --light-navy: #132e4a; }
-.gradient-hero { background: linear-gradient(135deg, #0a1628 0%, #0f2744 40%, #1a3a5c 100%); }
-.gold-text { color: var(--gold); }
-.gold-bg { background-color: var(--gold); }
-.gold-border { border-color: var(--gold); }
-.navy-bg { background-color: var(--navy); }
-.dark-blue-bg { background-color: var(--dark-blue); }
-.light-navy-bg { background-color: var(--light-navy); }
-.card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-.card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.3); }
-.hero-stat { border-right: 1px solid rgba(201,168,76,0.3); }
-.hero-stat:last-child { border-right: none; }
-.rate-card { border: 1px solid rgba(201,168,76,0.15); }
-.feature-icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
-.testimonial-card { border-left: 4px solid var(--gold); }
-.mortgage-calc { background: linear-gradient(135deg, #0f2744, #1a3a5c); }
-.footer-links a:hover { color: var(--gold); transition: color 0.2s; }
-.alert-banner { background: linear-gradient(90deg, #c9a84c, #e8c96a); }
-.secure-badge { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3); }
+:root {
+  --bg-primary: #0a0b1a;
+  --bg-secondary: #10112e;
+  --bg-card: #141538;
+  --bg-hover: #1a1b4a;
+  --amber: #ffb000;
+  --green: #00c853;
+  --red: #ff1744;
+  --cyan: #00d4ff;
+  --magenta: #ff2d95;
+  --text-primary: #e8e8f0;
+  --text-secondary: #7878a0;
+  --text-dim: #484868;
+  --border-color: #1e2050;
+  --glow-amber: 0 0 20px rgba(255,176,0,0.15);
+  --glow-cyan: 0 0 20px rgba(0,212,255,0.1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg-primary); color: var(--text-primary); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.amber { color: var(--amber); }
+.green { color: var(--green); }
+.red { color: var(--red); }
+.cyan { color: var(--cyan); }
+.magenta { color: var(--magenta); }
+.text-dim { color: var(--text-dim); }
+.text-secondary { color: var(--text-secondary); }
+.border-custom { border-color: var(--border-color); }
+.bg-card { background: var(--bg-card); }
+.bg-secondary { background: var(--bg-secondary); }
+.neon-border { border: 1px solid var(--border-color); position: relative; }
+.neon-border::after { content: ''; position: absolute; inset: -1px; border: 1px solid transparent; background: linear-gradient(135deg, var(--amber), transparent, var(--cyan)) border-box; -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; opacity: 0.3; transition: opacity 0.3s; }
+.neon-border:hover::after { opacity: 0.8; }
+@keyframes pulse-glow { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes data-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+@keyframes graph-line { 0% { stroke-dashoffset: 1000; } 100% { stroke-dashoffset: 0; } }
+@keyframes fade-up { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+.ticker-wrap { overflow: hidden; white-space: nowrap; padding: 8px 0; border-bottom: 1px solid var(--border-color); }
+.ticker-content { display: inline-block; animation: ticker 60s linear infinite; }
+.ticker-content:hover { animation-play-state: paused; }
+.ticker-item { display: inline-flex; align-items: center; gap: 12px; margin-right: 48px; font-size: 13px; }
+.pulse-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+.pulse-dot.green { background: var(--green); box-shadow: 0 0 8px var(--green); }
+.pulse-dot.red { background: var(--red); box-shadow: 0 0 8px var(--red); }
+.chart-line { stroke-dasharray: 1000; animation: graph-line 3s ease-out forwards; }
+.terminal-header { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 0.5px; border-bottom: 1px solid var(--border-color); padding: 8px 16px; display: flex; align-items: center; gap: 24px; }
+.terminal-header .active { color: var(--amber); }
+.data-grid { display: grid; gap: 1px; background: var(--border-color); border: 1px solid var(--border-color); }
+.data-grid > * { background: var(--bg-primary); padding: 12px 16px; }
+.stat-card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 20px; transition: all 0.2s; }
+.stat-card:hover { background: var(--bg-hover); box-shadow: var(--glow-amber); }
+.stat-card .label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+.stat-card .value { font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; margin: 4px 0; }
+.stat-card .change { font-size: 12px; }
+.terminal-prompt::before { content: '> '; color: var(--amber); }
+.flash { animation: data-blink 1s infinite; }
+.hex-bg { position: relative; overflow: hidden; }
+.hex-bg::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(60deg, transparent, transparent 40px, rgba(255,176,0,0.02) 40px, rgba(255,176,0,0.02) 41px); pointer-events: none; }
+.bracket-title { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--text-secondary); letter-spacing: 2px; }
+.bracket-title::before { content: '[ '; color: var(--amber); }
+.bracket-title::after { content: ' ]'; color: var(--amber); }
+.section-divider { height: 1px; background: linear-gradient(90deg, var(--amber), transparent); opacity: 0.3; margin: 40px 0; }
+.nav-link { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; transition: all 0.2s; }
+.nav-link:hover { color: var(--amber); border-bottom-color: var(--amber); }
+.nav-link.active { color: var(--amber); border-bottom-color: var(--amber); }
+.btn-terminal { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; background: transparent; border: 1px solid var(--amber); color: var(--amber); padding: 12px 32px; cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden; }
+.btn-terminal:hover { background: var(--amber); color: var(--bg-primary); box-shadow: var(--glow-amber); }
+.btn-terminal-secondary { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; background: transparent; border: 1px solid var(--cyan); color: var(--cyan); padding: 12px 32px; cursor: pointer; transition: all 0.2s; }
+.btn-terminal-secondary:hover { background: var(--cyan); color: var(--bg-primary); box-shadow: var(--glow-cyan); }
+.footer-link { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+.footer-link:hover { color: var(--amber); }
+input, textarea, select { background: var(--bg-primary); border: 1px solid var(--border-color); color: var(--text-primary); padding: 14px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; outline: none; transition: border-color 0.2s; width: 100%; }
+input:focus, textarea:focus, select:focus { border-color: var(--amber); box-shadow: var(--glow-amber); }
+label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 6px; }
 </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body>
 
-<!-- Top Alert Banner -->
-<div class="alert-banner text-navy text-sm py-2 px-6 text-center font-medium">
-  &#127942; Earn up to 4.75% APY on High-Yield Savings. <a href="#" class="underline font-bold">Open an account today &rarr;</a>
-</div>
-
-<!-- Header / Online Banking Bar -->
-<div class="bg-[#060e1a] text-gray-300 text-sm py-2 px-6">
-  <div class="max-w-7xl mx-auto flex justify-between items-center">
-    <div class="flex gap-6">
-      <a href="#" class="hover:text-white flex items-center gap-1">&#128179; Personal</a>
-      <a href="#" class="hover:text-white flex items-center gap-1">&#128188; Business</a>
-      <a href="#" class="hover:text-white flex items-center gap-1">&#128142; Wealth</a>
-      <a href="#" class="hover:text-white flex items-center gap-1">&#127891; Education</a>
-    </div>
-    <div class="flex gap-4 items-center">
-      <span class="text-gold font-semibold">Routing #: 021000322</span>
-      <a href="#" class="gold-bg text-navy font-bold px-4 py-1 rounded text-xs hover:opacity-90 transition">ENROLL</a>
-      <a href="#" class="gold-border border text-gold font-bold px-4 py-1 rounded text-xs hover:bg-gold hover:text-navy transition">ONLINE BANKING</a>
-    </div>
+<div id="app">
+<!-- Terminal Status Bar -->
+<div style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); padding: 0 16px;">
+  <div class="terminal-header" style="border-bottom: none; padding: 6px 0;">
+    <span class="active">NARMER</span>
+    <span>NMS:BK</span>
+    <span class="green">&#9650; +2.34%</span>
+    <span>VOL 12.4M</span>
+    <span>P/E 14.2</span>
+    <span>YTD +18.7%</span>
+    <span style="flex:1"></span>
+    <span style="color: var(--text-dim);">|</span>
+    <span class="text-dim">06.15.2026</span>
+    <span style="color: var(--text-dim);">|</span>
+    <span class="text-dim">15:32:48 UTC</span>
+    <span style="color: var(--text-dim);">|</span>
+    <span class="amber">&#9679; LIVE</span>
   </div>
 </div>
 
-<!-- Main Navigation -->
-<nav class="navy-bg text-white sticky top-0 z-50 shadow-2xl border-b border-gray-800">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex justify-between items-center py-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div>
+<!-- Main Header / Logo Bar -->
+<div style="background: var(--bg-primary); border-bottom: 1px solid var(--border-color); padding: 12px 24px;">
+  <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="width: 42px; height: 42px; border: 2px solid var(--amber); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 20px; color: var(--amber);">N</div>
         <div>
-          <div class="text-xl font-bold tracking-tight">NARMER</div>
-          <div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div>
-        </div>
-      </a>
-      <div class="hidden lg:flex space-x-8 font-medium text-sm">
-        <a href="index.html" class="gold-text border-b-2 border-gold pb-1">Home</a>
-        <a href="about.html" class="hover:text-gold transition pb-1">About</a>
-        <a href="services.html" class="hover:text-gold transition pb-1">Banking</a>
-        <a href="rates.html" class="hover:text-gold transition pb-1">Rates</a>
-        <a href="security.html" class="hover:text-gold transition pb-1">Security</a>
-        <a href="contact.html" class="hover:text-gold transition pb-1">Contact</a>
-      </div>
-      <div class="flex gap-3 items-center">
-        <a href="#" class="gold-bg text-navy font-bold px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition">Open Account</a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="gradient-hero text-white overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="relative z-10">
-        <div class="inline-block gold-bg text-navy text-xs font-bold px-4 py-1.5 rounded-full mb-6">&#9733; FDIC Insured | Trusted Since 1897</div>
-        <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6">Banking Built for <span class="gold-text">Your Legacy</span></h1>
-        <p class="text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">From everyday checking to comprehensive wealth management, Narmer Financial delivers the tools, guidance, and security you need to build, protect, and pass on generational wealth.</p>
-        <div class="flex flex-wrap gap-4 mb-12">
-          <a href="#" class="gold-bg text-navy font-bold px-8 py-4 rounded-xl text-lg hover:opacity-90 transition flex items-center gap-2">Open an Account &#8594;</a>
-          <a href="services.html" class="border border-gray-500 text-white font-semibold px-8 py-4 rounded-xl text-lg hover:bg-white hover:text-navy transition">Explore Services</a>
-        </div>
-        <div class="flex flex-wrap gap-8 text-sm">
-          <div class="flex items-center gap-2"><span class="text-green-400 font-bold">4.8&#9733;</span> <span class="text-gray-400">Trustpilot Rating</span></div>
-          <div class="flex items-center gap-2"><span class="gold-text font-bold">15M+</span> <span class="text-gray-400">Active Customers</span></div>
-          <div class="flex items-center gap-2"><span class="gold-text font-bold">$220B</span> <span class="text-gray-400">Assets Under Management</span></div>
-        </div>
-      </div>
-      <div class="hidden lg:block relative">
-        <div class="relative">
-          <div class="w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" />
-          </div>
-          <!-- Floating card -->
-          <div class="absolute -bottom-6 -left-6 bg-white text-navy p-6 rounded-2xl shadow-2xl max-w-xs">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold">&#10003;</div>
-              <div>
-                <p class="font-bold text-sm">Account Approved</p>
-                <p class="text-xs text-gray-500">In under 3 minutes</p>
-              </div>
-            </div>
-            <div class="text-3xl font-black gold-text">4.75%<span class="text-sm text-gray-500 font-normal"> APY</span></div>
-            <p class="text-xs text-gray-500">High-Yield Savings</p>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; letter-spacing: 3px;">NARMER</div>
+          <div style="display: flex; gap: 12px; font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--text-dim);">
+            <span>NYSE:NMR</span>
+            <span>FDIC</span>
+            <span class="amber">&#9733; BLUE CHIP</span>
           </div>
         </div>
       </div>
     </div>
-    <!-- Quick Stats -->
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20 p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-      <div class="text-center hero-stat">
-        <div class="text-3xl font-black gold-text">0.01%</div>
-        <p class="text-sm text-gray-400">Checking APR</p>
-      </div>
-      <div class="text-center hero-stat">
-        <div class="text-3xl font-black gold-text">4.75%</div>
-        <p class="text-sm text-gray-400">Savings APY</p>
-      </div>
-      <div class="text-center hero-stat">
-        <div class="text-3xl font-black gold-text">5.99%</div>
-        <p class="text-sm text-gray-400">Mortgage Rate</p>
-      </div>
-      <div class="text-center">
-        <div class="text-3xl font-black gold-text">9.74%</div>
-        <p class="text-sm text-gray-400">Auto Loan APR</p>
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="text-align: right; font-family: 'JetBrains Mono', monospace;">
+        <div style="font-size: 11px; color: var(--text-dim);">NYSE &#9650;</div>
+        <div style="font-size: 20px; font-weight: 700; color: var(--green);">$164.82</div>
+        <div style="font-size: 12px; color: var(--green);">+$3.77 (+2.34%)</div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- Products Section -->
-<section class="py-24 px-6 bg-gray-50">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Products</p>
-      <h2 class="text-4xl lg:text-5xl font-black text-navy mb-4">Banking That Fits Your Life</h2>
-      <p class="text-gray-500 max-w-2xl mx-auto text-lg">From student checking to premier wealth accounts, we have the right solution for every stage of your financial journey.</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-gray-100">
-        <div class="feature-icon gold-bg text-navy mb-6">&#128176;</div>
-        <h3 class="text-xl font-bold mb-2">Checking</h3>
-        <p class="text-gray-500 text-sm mb-4">Everyday banking with no monthly fees and unlimited transactions.</p>
-        <p class="text-3xl font-black gold-text">$0<span class="text-sm text-gray-400 font-normal">/mo</span></p>
-        <a href="#" class="mt-4 inline-block text-navy font-semibold hover:text-gold transition text-sm">Compare Accounts &rarr;</a>
-      </div>
-      <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-gray-100">
-        <div class="feature-icon gold-bg text-navy mb-6">&#128200;</div>
-        <h3 class="text-xl font-bold mb-2">Savings</h3>
-        <p class="text-gray-500 text-sm mb-4">High-yield savings with competitive rates and automated goals.</p>
-        <p class="text-3xl font-black gold-text">4.75%<span class="text-sm text-gray-400 font-normal"> APY</span></p>
-        <a href="#" class="mt-4 inline-block text-navy font-semibold hover:text-gold transition text-sm">Open Savings &rarr;</a>
-      </div>
-      <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-gray-100">
-        <div class="feature-icon gold-bg text-navy mb-6">&#127970;</div>
-        <h3 class="text-xl font-bold mb-2">Mortgages</h3>
-        <p class="text-gray-500 text-sm mb-4">Fixed and adjustable-rate mortgages with streamlined processing.</p>
-        <p class="text-3xl font-black gold-text">5.99%<span class="text-sm text-gray-400 font-normal"> APR</span></p>
-        <a href="#" class="mt-4 inline-block text-navy font-semibold hover:text-gold transition text-sm">Get Prequalified &rarr;</a>
-      </div>
-      <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-gray-100">
-        <div class="feature-icon gold-bg text-navy mb-6">&#128142;</div>
-        <h3 class="text-xl font-bold mb-2">Wealth Management</h3>
-        <p class="text-gray-500 text-sm mb-4">Dedicated advisors, portfolio strategies, and legacy planning.</p>
-        <p class="text-3xl font-black gold-text">$250B+<span class="text-sm text-gray-400 font-normal"> AUM</span></p>
-        <a href="#" class="mt-4 inline-block text-navy font-semibold hover:text-gold transition text-sm">Speak to Advisor &rarr;</a>
-      </div>
-    </div>
+<!-- Navigation -->
+<div style="border-bottom: 1px solid var(--border-color); background: var(--bg-secondary);">
+  <div style="max-width: 1400px; margin: 0 auto; padding: 0 24px; display: flex; gap: 32px; align-items: center; height: 44px;">
+    <a href="index.html" class="nav-link active">MARKETS</a>
+    <a href="about.html" class="nav-link">ABOUT</a>
+    <a href="services.html" class="nav-link">SERVICES</a>
+    <a href="rates.html" class="nav-link">RATES</a>
+    <a href="security.html" class="nav-link">SECURITY</a>
+    <a href="contact.html" class="nav-link">CONTACT</a>
+    <div style="flex:1"></div>
+    <a href="#" class="nav-link" style="color: var(--cyan);">&#128274; SECURE LOGIN</a>
   </div>
-</section>
+</div>
 
-<!-- Why Narmer -->
-<section class="py-24 px-6 navy-bg text-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
+<!-- Ticker -->
+<div class="ticker-wrap" style="background: var(--bg-secondary);">
+  <div class="ticker-content">
+    <span class="ticker-item"><span class="mono" style="color: var(--amber);">&#9679;</span> <span class="mono" style="color: var(--text-secondary); font-weight: 500;">DJIA</span> <span class="mono amber">42,816.92</span> <span class="mono green">+0.87%</span></span>
+    <span class="ticker-item"><span class="mono" style="color: var(--amber);">&#9679;</span> <span class="mono" style="color: var(--text-secondary); font-weight: 500;">SPX</span> <span class="mono amber">5,842.13</span> <span class="mono green">+1.12%</span></span>
+    <span class="ticker-item"><span class="mono" style="color: var(--amber);">&#9679;</span> <span class="mono" style="color: var(--text-secondary); font-weight: 500;">COMP</span> <span class="mono amber">18,440.55</span> <span class="mono green">+1.54%</span></span>
+    <span class="ticker-item"><span class="mono" style="color: var(--amber);">&#9679;</span> <span class="mono" style="color: var(--text-secondary); font-weight: 500;">VIX</span> <span class="mono amber">12.44</span> <span class="mono green">-3.12%</span></span>
+    <span class="ticker-item"><span class="mono" style="color: var(--amber);">&#9679;</span> <span class="mono" style="color: var(--text-secondary); font-weight: 500;">10Y</span> <span class="mono amber">4.28%</span> <span class="mono red">+2bp</span></span>
+    <span class="ticker-item"><span class="mono" style="color: var(--amber);">&#9679;</span> <span class="mono" style="color: var(--text-secondary); font-weight: 500;">BTC</span> <span class="mono amber">$68,412</span> <span class="mono green">+3.21%</span></span>
+    <span class="ticker-item"><span class="mono" style="color: var(--amber);">&#9679;</span> <span class="mono" style="color: var(--text-secondary); font-weight: 500;">EUR/USD</span> <span class="mono amber">1.0872</span> <span class="mono red">-0.34%</span></span>
+    <span class="ticker-item"><span class="mono" style="color: var(--amber);">&#9679;</span> <span class="mono" style="color: var(--text-secondary); font-weight: 500;">GC1</span> <span class="mono amber">$2,368</span> <span class="mono green">+0.56%</span></span>
+    <span class="ticker-item"><span class="mono" style="color: var(--amber);">&#9679;</span> <span class="mono" style="color: var(--text-secondary); font-weight: 500;">CL1</span> <span class="mono amber">$78.42</span> <span class="mono red">-1.08%</span></span>
+  </div>
+</div>
+
+<!-- Hero Section - Terminal Style Dashboard -->
+<section class="hex-bg" style="padding: 40px 24px; border-bottom: 1px solid var(--border-color);">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+      
+      <!-- Left: Key Metrics -->
       <div>
-        <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Why Narmer</p>
-        <h2 class="text-4xl lg:text-5xl font-black mb-6">A Century of Trust, A Future of Innovation</h2>
-        <p class="text-gray-300 mb-8 text-lg">For over 125 years, Narmer Financial has been the bedrock of American finance. Today, we combine that legacy with cutting-edge digital banking to serve 15 million customers nationwide.</p>
-        <div class="grid grid-cols-2 gap-6">
-          <div class="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div class="text-4xl font-black gold-text">125+</div>
-            <p class="text-gray-400 text-sm">Years of Service</p>
+        <div class="bracket-title" style="margin-bottom: 24px;">FIRST REPUBLIC DASHBOARD</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;">
+          <div class="stat-card neon-border">
+            <div class="label">TOTAL ASSETS</div>
+            <div class="value green">$220.4B</div>
+            <div class="change green">&#9650; +12.3% YoY</div>
           </div>
-          <div class="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div class="text-4xl font-black gold-text">15M</div>
-            <p class="text-gray-400 text-sm">Active Customers</p>
+          <div class="stat-card neon-border">
+            <div class="label">CUSTOMERS</div>
+            <div class="value" style="color: var(--cyan);">15.2M</div>
+            <div class="change green">&#9650; +840K Q2</div>
           </div>
-          <div class="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div class="text-4xl font-black gold-text">4,200</div>
-            <p class="text-gray-400 text-sm">Branch Locations</p>
+          <div class="stat-card neon-border">
+            <div class="label">NET INCOME</div>
+            <div class="value green">$2.8B</div>
+            <div class="change green">&#9650; +8.4%</div>
           </div>
-          <div class="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div class="text-4xl font-black gold-text">63,000</div>
-            <p class="text-gray-400 text-sm">Employees</p>
+          <div class="stat-card neon-border">
+            <div class="label">CAPITAL RATIO</div>
+            <div class="value" style="color: var(--cyan);">14.2%</div>
+            <div class="change green">&#9650; +0.6%</div>
           </div>
         </div>
+        <div class="terminal-prompt" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-secondary); margin-bottom: 24px; padding: 16px; background: var(--bg-card); border-left: 2px solid var(--amber);">
+          NARMER has been upgraded to "OUTPERFORM" by Goldman Sachs. Target price raised to $192.
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <a href="services.html" class="btn-terminal" style="text-decoration: none;">EXPLORE SERVICES</a>
+          <a href="rates.html" class="btn-terminal-secondary" style="text-decoration: none;">VIEW RATES</a>
+        </div>
       </div>
-      <div class="relative">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92fb1ab?auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-2xl" />
-        <div class="absolute -bottom-4 -left-4 gold-bg text-navy p-6 rounded-2xl shadow-2xl">
-          <p class="font-bold text-lg">&#9733; J.D. Power Award</p>
-          <p class="text-sm">#1 in Customer Satisfaction</p>
-          <p class="text-xs mt-1">Retail Banking, 2025</p>
+      
+      <!-- Right: Chart Visualization -->
+      <div class="neon-border" style="background: var(--bg-card); padding: 24px; height: 100%;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <div class="bracket-title" style="font-size: 11px;">NMR : 5-YR PERFORMANCE</div>
+          <div style="display: flex; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px;">
+            <span style="color: var(--amber);">1D</span>
+            <span style="color: var(--text-dim);">|</span>
+            <span style="color: var(--text-dim);">1M</span>
+            <span style="color: var(--text-dim);">|</span>
+            <span style="color: var(--text-dim);">6M</span>
+            <span style="color: var(--text-dim);">|</span>
+            <span class="amber">1Y</span>
+            <span style="color: var(--text-dim);">|</span>
+            <span style="color: var(--text-dim);">MAX</span>
+          </div>
+        </div>
+        
+        <!-- Abstract chart using SVG -->
+        <svg viewBox="0 0 400 180" style="width: 100%; height: auto;">
+          <defs>
+            <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--amber)" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="var(--amber)" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- Grid lines -->
+          <line x1="0" y1="40" x2="400" y2="40" stroke="var(--border-color)" stroke-width="0.5"/>
+          <line x1="0" y1="80" x2="400" y2="80" stroke="var(--border-color)" stroke-width="0.5"/>
+          <line x1="0" y1="120" x2="400" y2="120" stroke="var(--border-color)" stroke-width="0.5"/>
+          <line x1="0" y1="160" x2="400" y2="160" stroke="var(--border-color)" stroke-width="0.5"/>
+          <!-- Chart area -->
+          <path d="M0,150 Q20,140 40,145 Q60,130 80,120 Q100,135 120,110 Q140,95 160,100 Q180,80 200,70 Q220,55 240,60 Q260,40 280,35 Q300,45 320,30 Q340,25 360,20 Q380,15 400,25 L400,180 L0,180 Z" fill="url(#chartGrad)"/>
+          <!-- Chart line -->
+          <path d="M0,150 Q20,140 40,145 Q60,130 80,120 Q100,135 120,110 Q140,95 160,100 Q180,80 200,70 Q220,55 240,60 Q260,40 280,35 Q300,45 320,30 Q340,25 360,20 Q380,15 400,25" fill="none" stroke="var(--amber)" stroke-width="2" class="chart-line"/>
+          <!-- Moving average line -->
+          <path d="M0,155 Q20,148 40,150 Q60,142 80,138 Q100,140 120,125 Q140,118 160,115 Q180,105 200,100 Q220,90 240,92 Q260,78 280,75 Q300,80 320,65 Q340,60 360,55 Q380,50 400,52" fill="none" stroke="var(--cyan)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+          <!-- Current price marker -->
+          <line x1="380" y1="0" x2="380" y2="180" stroke="var(--amber)" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+          <circle cx="380" cy="25" r="4" fill="var(--amber)"/>
+          <!-- Y-axis labels -->
+          <text x="-10" y="44" fill="var(--text-dim)" font-family="JetBrains Mono" font-size="10">180</text>
+          <text x="-10" y="84" fill="var(--text-dim)" font-family="JetBrains Mono" font-size="10">120</text>
+          <text x="-10" y="124" fill="var(--text-dim)" font-family="JetBrains Mono" font-size="10">60</text>
+          <text x="-10" y="164" fill="var(--text-dim)" font-family="JetBrains Mono" font-size="10">0</text>
+        </svg>
+        
+        <!-- Volume bars -->
+        <div style="display: flex; gap: 2px; margin-top: 12px; align-items: flex-end; height: 30px;">
+          <div style="flex: 1; height: 12px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 8px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 18px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 14px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 22px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 16px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 26px; background: var(--amber); opacity: 0.4;"></div>
+          <div style="flex: 1; height: 10px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 20px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 14px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 24px; background: var(--amber); opacity: 0.4;"></div>
+          <div style="flex: 1; height: 18px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 8px; background: var(--border-color);"></div>
+          <div style="flex: 1; height: 12px; background: var(--border-color);"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Online Banking CTA -->
-<section class="py-20 px-6">
-  <div class="max-w-5xl mx-auto mortgage-calc rounded-3xl p-12 lg:p-16 text-white text-center">
-    <div class="max-w-2xl mx-auto">
-      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Digital Banking</p>
-      <h2 class="text-4xl lg:text-5xl font-black mb-6">Your Bank, Right in Your Pocket</h2>
-      <p class="text-gray-300 mb-8 text-lg">Deposit checks, pay bills, transfer money, and manage your investments — all from the Narmer Mobile app. Rated 4.9 stars on the App Store.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#" class="bg-black text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-gray-800 transition"><span>&#63743;</span> App Store</a>
-        <a href="#" class="bg-black text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-gray-800 transition"><span>&#9679;&#9679;&#9679;</span> Google Play</a>
-        <a href="#" class="gold-bg text-navy px-8 py-4 rounded-xl font-bold hover:opacity-90 transition">Enroll in Online Banking</a>
+<!-- Product Grid - Terminal Style -->
+<section style="padding: 48px 24px; border-bottom: 1px solid var(--border-color);">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+      <div class="bracket-title">FINANCIAL PRODUCTS</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim);">SORT BY: <span class="amber">APY &#9650;</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+      <div class="stat-card neon-border">
+        <div class="label" style="margin-bottom: 8px;">CHECKING</div>
+        <div class="value" style="font-size: 22px;">EveryDay</div>
+        <div style="margin: 12px 0;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 700; color: var(--cyan);">$0</div>
+          <div style="font-size: 11px; color: var(--text-dim);">MONTHLY FEE</div>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-secondary);">&#10003; Unlimited ATM rebates<br>&#10003; Overdraft protection<br>&#10003; Zelle integrated</div>
+        <a href="#" class="btn-terminal" style="margin-top: 16px; display: block; text-align: center; text-decoration: none; font-size: 11px; padding: 10px;">OPEN</a>
+      </div>
+      <div class="stat-card neon-border">
+        <div class="label" style="margin-bottom: 8px;">SAVINGS</div>
+        <div class="value" style="font-size: 22px;">High-Yield</div>
+        <div style="margin: 12px 0;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 700; color: var(--green);">4.75%</div>
+          <div style="font-size: 11px; color: var(--text-dim);">ANNUAL YIELD</div>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-secondary);">&#10003; No minimum deposit<br>&#10003; FDIC insured $250K<br>&#10003; Auto-save tools</div>
+        <a href="#" class="btn-terminal" style="margin-top: 16px; display: block; text-align: center; text-decoration: none; font-size: 11px; padding: 10px;">OPEN</a>
+      </div>
+      <div class="stat-card neon-border">
+        <div class="label" style="margin-bottom: 8px;">MORTGAGE</div>
+        <div class="value" style="font-size: 22px;">30-YR Fixed</div>
+        <div style="margin: 12px 0;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 700; color: var(--amber);">5.99%</div>
+          <div style="font-size: 11px; color: var(--text-dim);">APR</div>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-secondary);">&#10003; 5% down available<br>&#10003; 90-day rate lock<br>&#10003; FHA / VA / Conv.</div>
+        <a href="#" class="btn-terminal" style="margin-top: 16px; display: block; text-align: center; text-decoration: none; font-size: 11px; padding: 10px;">APPLY</a>
+      </div>
+      <div class="stat-card neon-border">
+        <div class="label" style="margin-bottom: 8px;">WEALTH</div>
+        <div class="value" style="font-size: 22px;">Private Client</div>
+        <div style="margin: 12px 0;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 700; color: var(--magenta);">$250B+</div>
+          <div style="font-size: 11px; color: var(--text-dim);">AUM</div>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-secondary);">&#10003; Dedicated advisor<br>&#10003; Tax strategy<br>&#10003; Estate planning</div>
+        <a href="#" class="btn-terminal-secondary" style="margin-top: 16px; display: block; text-align: center; text-decoration: none; font-size: 11px; padding: 10px;">INQUIRE</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="py-24 px-6 bg-gray-50">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Testimonials</p>
-      <h2 class="text-4xl lg:text-5xl font-black text-navy mb-4">Hear from Our Customers</h2>
+<!-- Market Data Section -->
+<section style="padding: 48px 24px; border-bottom: 1px solid var(--border-color);">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+      <!-- Left: Market indices table -->
+      <div>
+        <div class="bracket-title" style="margin-bottom: 20px;">GLOBAL INDICES</div>
+        <div class="data-grid">
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); background: var(--bg-secondary); padding: 10px 16px;">
+            <span>INDEX</span><span style="text-align: right;">LAST</span><span style="text-align: right;">CHG</span><span style="text-align: right;">CHG%</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 10px 16px;">
+            <span style="color: var(--text-secondary);">S&P 500</span><span style="text-align: right;">5,842.13</span><span style="text-align: right; color: var(--green);">+64.87</span><span style="text-align: right; color: var(--green);">+1.12%</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 10px 16px;">
+            <span style="color: var(--text-secondary);">Dow Jones</span><span style="text-align: right;">42,816.92</span><span style="text-align: right; color: var(--green);">+370.42</span><span style="text-align: right; color: var(--green);">+0.87%</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 10px 16px;">
+            <span style="color: var(--text-secondary);">NASDAQ</span><span style="text-align: right;">18,440.55</span><span style="text-align: right; color: var(--green);">+279.84</span><span style="text-align: right; color: var(--green);">+1.54%</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 10px 16px;">
+            <span style="color: var(--text-secondary);">FTSE 100</span><span style="text-align: right;">8,342.18</span><span style="text-align: right; color: var(--red);">-42.16</span><span style="text-align: right; color: var(--red);">-0.50%</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 10px 16px;">
+            <span style="color: var(--text-secondary);">Nikkei 225</span><span style="text-align: right;">39,421.08</span><span style="text-align: right; color: var(--green);">+312.55</span><span style="text-align: right; color: var(--green);">+0.80%</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Earnings / News -->
+      <div>
+        <div class="bracket-title" style="margin-bottom: 20px;">EARNINGS & NEWS</div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 20px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); margin-bottom: 16px;">Q2 2026 | EARNINGS RELEASE</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+            <div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim);">REVENUE</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: var(--green);">$8.2B</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--green);">&#9650; +6.8%</div>
+            </div>
+            <div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim);">EPS</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: var(--cyan);">$4.82</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--green);">&#9650; +$0.34 BEAT</div>
+            </div>
+          </div>
+          <div style="display: flex; font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 12px; background: var(--bg-primary); border-left: 2px solid var(--amber); margin-bottom: 8px;">
+            <span class="green">&#9650;</span> <span style="color: var(--text-secondary); margin-left: 8px;">Narmer beats estimates as net interest margin expands 22bps</span>
+          </div>
+          <div style="display: flex; font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 12px; background: var(--bg-primary); border-left: 2px solid var(--cyan);">
+            <span class="cyan">&#9650;</span> <span style="color: var(--text-secondary); margin-left: 8px;">Board authorizes $4.2B share buyback program</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm">
-        <div class="flex mb-4 gold-text">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="text-gray-700 mb-4 italic">&ldquo;Narmer made buying our first home effortless. The mortgage team guided us through every step.&rdquo;</p>
-        <p class="font-bold">&mdash; Sarah & Michael T.</p>
-        <p class="text-sm text-gray-500">First-Time Homebuyers</p>
+  </div>
+</section>
+
+<!-- Trust & Footprint -->
+<section style="padding: 48px 24px; border-bottom: 1px solid var(--border-color); background: var(--bg-secondary);">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border-color);">
+      <div style="background: var(--bg-secondary); padding: 24px; text-align: center;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; color: var(--amber);">125+</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 1px;">YEARS EST.</div>
       </div>
-      <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm">
-        <div class="flex mb-4 gold-text">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="text-gray-700 mb-4 italic">&ldquo;Their wealth management team helped me structure a portfolio that aligns with my values and goals.&rdquo;</p>
-        <p class="font-bold">&mdash; David K.</p>
-        <p class="text-sm text-gray-500">Private Client, 12 Years</p>
+      <div style="background: var(--bg-secondary); padding: 24px; text-align: center;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; color: var(--cyan);">15.2M</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 1px;">CUSTOMERS</div>
       </div>
-      <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm">
-        <div class="flex mb-4 gold-text">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="text-gray-700 mb-4 italic">&ldquo;The mobile app is incredible. I manage everything from my phone and the customer support is top-tier.&rdquo;</p>
-        <p class="font-bold">&mdash; Jessica L.</p>
-        <p class="text-sm text-gray-500">Small Business Owner</p>
+      <div style="background: var(--bg-secondary); padding: 24px; text-align: center;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; color: var(--green);">4,200</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 1px;">BRANCHES</div>
+      </div>
+      <div style="background: var(--bg-secondary); padding: 24px; text-align: center;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; color: var(--magenta);">63K</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 1px;">EMPLOYEES</div>
+      </div>
+      <div style="background: var(--bg-secondary); padding: 24px; text-align: center;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; color: var(--amber);">31</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 1px;">COUNTRIES</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile CTA -->
+<section style="padding: 48px 24px;">
+  <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
+    <div>
+      <div class="bracket-title">NARMER MOBILE</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; margin: 16px 0; line-height: 1.3;">YOUR BANK.<br>TERMINAL IN YOUR POCKET.</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 24px;">Rated 4.9 &#9733; on App Store. 10M+ downloads.</div>
+      <div style="display: flex; gap: 12px;">
+        <a href="#" class="btn-terminal" style="text-decoration: none; padding: 12px 24px;">&#63743; APP STORE</a>
+        <a href="#" class="btn-terminal" style="text-decoration: none; padding: 12px 24px;">&#9679;&#9679;&#9679; PLAY STORE</a>
+      </div>
+    </div>
+    <div class="neon-border" style="background: var(--bg-card); padding: 24px; display: flex; align-items: center; justify-content: center; min-height: 140px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); text-align: center; line-height: 2;">
+        <span class="amber">&#10003;</span> MOBILE DEPOSIT<br>
+        <span class="amber">&#10003;</span> REAL-TIME ALERTS<br>
+        <span class="amber">&#10003;</span> TRADING & INVESTMENTS<br>
+        <span class="amber">&#10003;</span> FACE ID / TOUCH ID<br>
+        <span class="amber">&#10003;</span> 24/7 CHAT SUPPORT
       </div>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="navy-bg text-gray-400 py-16 px-6 border-t border-gray-800">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<footer style="border-top: 1px solid var(--border-color); padding: 48px 24px;">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px;">
       <div>
-        <div class="flex items-center gap-3 mb-6">
-          <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div>
-          <div>
-            <div class="text-xl font-bold text-white tracking-tight">NARMER</div>
-            <div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div>
-          </div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <div style="width: 32px; height: 32px; border: 1.5px solid var(--amber); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 16px; color: var(--amber);">N</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 2px;">NARMER</div>
         </div>
-        <p class="text-sm">Member FDIC. Equal Housing Lender. &copy; 2026 Narmer Financial. All rights reserved.</p>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); line-height: 1.8;">
+          Member FDIC. Equal Housing Lender.<br>
+          &copy; 2026 Narmer Financial Holdings Inc.<br>
+          NYSE: NMR | CUSIP: 63123X102
+        </div>
       </div>
-      <div class="footer-links">
-        <h4 class="text-white font-bold mb-4">Personal</h4>
-        <div class="flex flex-col gap-2 text-sm"><a href="#">Checking</a><a href="#">Savings</a><a href="#">Credit Cards</a><a href="#">Mortgages</a><a href="#">Auto Loans</a></div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber); margin-bottom: 16px; letter-spacing: 1px;">PERSONAL</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="#" class="footer-link">Checking</a>
+          <a href="#" class="footer-link">Savings</a>
+          <a href="#" class="footer-link">Credit Cards</a>
+          <a href="#" class="footer-link">Mortgages</a>
+          <a href="#" class="footer-link">Auto Loans</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <h4 class="text-white font-bold mb-4">Business</h4>
-        <div class="flex flex-col gap-2 text-sm"><a href="#">Business Checking</a><a href="#">Merchant Services</a><a href="#">Commercial Lending</a><a href="#">Payroll</a><a href="#">Treasury Management</a></div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber); margin-bottom: 16px; letter-spacing: 1px;">INSTITUTIONAL</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="#" class="footer-link">Business Banking</a>
+          <a href="#" class="footer-link">Merchant Services</a>
+          <a href="#" class="footer-link">Commercial Lending</a>
+          <a href="#" class="footer-link">Treasury Mgmt</a>
+          <a href="#" class="footer-link">Capital Markets</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <h4 class="text-white font-bold mb-4">Support</h4>
-        <div class="flex flex-col gap-2 text-sm"><a href="contact.html">Contact Us</a><a href="#">Lost/Stolen Card</a><a href="#">Dispute a Transaction</a><a href="#">Branch Locator</a><a href="#">Privacy Policy</a></div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber); margin-bottom: 16px; letter-spacing: 1px;">SUPPORT</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="contact.html" class="footer-link">Contact</a>
+          <a href="security.html" class="footer-link">Security</a>
+          <a href="#" class="footer-link">Locations</a>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Accessibility</a>
+        </div>
       </div>
     </div>
-    <div class="border-t border-gray-800 pt-8 text-xs flex flex-col lg:flex-row justify-between items-center gap-4">
-      <p>Routing Number: 021000322 | SWIFT: NARMUS33 | NMLS #412245</p>
-      <div class="flex gap-4">
-        <a href="#" class="hover:text-white">Privacy</a>
-        <a href="#" class="hover:text-white">Terms</a>
-        <a href="#" class="hover:text-white">Accessibility</a>
-      </div>
+    <div style="padding-top: 24px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim);">
+      <span>RTE: 021000322 | SWIFT: NARMUS33 | NMLS #412245</span>
+      <span>DATA DELAYED 15 MIN | &copy; 2026 NARMER FINANCIAL</span>
     </div>
   </div>
 </footer>
+</div>
 
 <script>
 const backendUrl = "http://localhost:5000/api/contact";
@@ -313,13 +492,22 @@ if (form) {
     const btn = form.querySelector("button");
     const original = btn.innerText;
     btn.disabled = true;
-    btn.innerText = "Sending...";
+    btn.innerText = "SENDING...";
     try {
-      const res = await fetch(backendUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ brandId: "narmer-financial", name: document.getElementById("name").value, email: document.getElementById("email").value, message: document.getElementById("message").value }) });
+      const res = await fetch(backendUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          brandId: "narmer-financial",
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value
+        })
+      });
       const result = await res.json();
-      if (result.success) { alert("Success: " + result.message); form.reset(); }
-      else { alert("Error: " + (result.errors ? result.errors[0].msg : result.message)); }
-    } catch (err) { alert("Error connecting to server. Please try again later."); }
+      if (result.success) { alert("TRANSMISSION COMPLETE: " + result.message); form.reset(); }
+      else { alert("ERROR: " + (result.errors ? result.errors[0].msg : result.message)); }
+    } catch (err) { alert("CONNECTION ERROR. RETRY TRANSMISSION."); }
     finally { btn.disabled = false; btn.innerText = original; }
   });
 }

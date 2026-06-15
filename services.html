@@ -3,149 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Narmer Financial | Banking Services</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>NARMER FINANCIAL | SERVICES</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-* { font-family: 'Inter', sans-serif; }
-:root { --navy: #0a1628; --gold: #c9a84c; --dark-blue: #0f2744; }
-.gradient-hero { background: linear-gradient(135deg, #0a1628 0%, #0f2744 40%, #1a3a5c 100%); }
-.gold-text { color: var(--gold); }
-.gold-bg { background-color: var(--gold); }
-.navy-bg { background-color: var(--navy); }
-.service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.12); transition: all 0.3s ease; }
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>:root{--bg-primary:#0a0b1a;--bg-secondary:#10112e;--bg-card:#141538;--bg-hover:#1a1b4a;--amber:#ffb000;--green:#00c853;--red:#ff1744;--cyan:#00d4ff;--magenta:#ff2d95;--text-primary:#e8e8f0;--text-secondary:#7878a0;--text-dim:#484868;--border-color:#1e2050}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg-primary);color:var(--text-primary);font-family:'Inter',sans-serif}.mono{font-family:'JetBrains Mono',monospace}.amber{color:var(--amber)}.green{color:var(--green)}.red{color:var(--red)}.cyan{color:var(--cyan)}.magenta{color:var(--magenta)}.text-dim{color:var(--text-dim)}.text-secondary{color:var(--text-secondary)}.bg-card{background:var(--bg-card)}.neon-border{border:1px solid var(--border-color);position:relative;transition:all .2s}.neon-border::after{content:'';position:absolute;inset:-1px;border:1px solid transparent;background:linear-gradient(135deg,var(--amber),transparent,var(--cyan)) border-box;-webkit-mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.3;transition:opacity .3s}.neon-border:hover::after{opacity:.8}.neon-border:hover{background:var(--bg-hover)}.bracket-title{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--text-secondary);letter-spacing:2px}.bracket-title::before{content:'[';color:var(--amber)}.bracket-title::after{content:']';color:var(--amber)}.nav-link{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:all .2s}.nav-link:hover{color:var(--amber);border-bottom-color:var(--amber)}.nav-link.active{color:var(--amber);border-bottom-color:var(--amber)}.footer-link{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);text-decoration:none;transition:color .2s}.footer-link:hover{color:var(--amber)}.service-card{background:var(--bg-card);border:1px solid var(--border-color);padding:24px;transition:all .2s}.service-card:hover{background:var(--bg-hover)}
 </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
-<div class="bg-[#060e1a] text-gray-300 text-sm py-2 px-6">
-  <div class="max-w-7xl mx-auto flex justify-between items-center">
-    <div class="flex gap-6"><a href="#" class="hover:text-white">&#128179; Personal</a><a href="#" class="hover:text-white">&#128188; Business</a><a href="#" class="hover:text-white">&#128142; Wealth</a></div>
-    <div class="flex gap-4 items-center"><span class="text-gold font-semibold">Routing #: 021000322</span><a href="#" class="gold-bg text-navy font-bold px-4 py-1 rounded text-xs hover:opacity-90">ONLINE BANKING</a></div>
+<body>
+
+<div style="background:var(--bg-secondary);border-bottom:1px solid var(--border-color);padding:0 16px;">
+  <div class="mono" style="font-size:11px;color:var(--text-dim);letter-spacing:.5px;border-bottom:none;padding:6px 0;display:flex;align-items:center;gap:24px;">
+    <span class="amber">NARMER</span><span>NMS:BK</span><span class="green">&#9650; +2.34%</span><span style="flex:1"></span><span class="text-dim">06.15.2026</span><span>|</span><span class="text-dim">15:32:48 UTC</span><span>|</span><span class="amber">&#9679; LIVE</span>
   </div>
 </div>
-<nav class="navy-bg text-white sticky top-0 z-50 shadow-2xl border-b border-gray-800">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex justify-between items-center py-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div>
-        <div><div class="text-xl font-bold tracking-tight">NARMER</div><div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div></div>
-      </a>
-      <div class="hidden lg:flex space-x-8 font-medium text-sm">
-        <a href="index.html" class="hover:text-gold transition pb-1">Home</a>
-        <a href="about.html" class="hover:text-gold transition pb-1">About</a>
-        <a href="services.html" class="gold-text border-b-2 border-gold pb-1">Banking</a>
-        <a href="rates.html" class="hover:text-gold transition pb-1">Rates</a>
-        <a href="security.html" class="hover:text-gold transition pb-1">Security</a>
-        <a href="contact.html" class="hover:text-gold transition pb-1">Contact</a>
-      </div>
-      <a href="#" class="gold-bg text-navy font-bold px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition">Open Account</a>
-    </div>
-  </div>
-</nav>
 
-<section class="gradient-hero text-white py-20 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="max-w-3xl">
-      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Services</p>
-      <h1 class="text-5xl lg:text-7xl font-black mb-6">Complete <span class="gold-text">Financial Solutions</span></h1>
-      <p class="text-xl text-gray-300 leading-relaxed">From personal checking to corporate treasury management, Narmer Financial offers a full spectrum of banking products designed for every stage of life and business.</p>
+<div style="background:var(--bg-primary);border-bottom:1px solid var(--border-color);padding:12px 24px;">
+  <div style="max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:42px;height:42px;border:2px solid var(--amber);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:20px;color:var(--amber);">N</div>
+      <div><div class="mono" style="font-size:18px;font-weight:700;letter-spacing:3px;">NARMER</div><div style="display:flex;gap:12px;font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);"><span>NYSE:NMR</span><span>FDIC</span><span class="amber">&#9733; BLUE CHIP</span></div></div>
     </div>
+    <div style="text-align:right;font-family:'JetBrains Mono',monospace;"><div style="font-size:11px;color:var(--text-dim);">NYSE &#9650;</div><div style="font-size:20px;font-weight:700;color:var(--green);">$164.82</div><div style="font-size:12px;color:var(--green);">+$3.77 (+2.34%)</div></div>
   </div>
-</section>
+</div>
 
-<section class="py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-        <div class="w-14 h-14 gold-bg rounded-2xl flex items-center justify-center text-2xl mb-6">&#128179;</div>
-        <h3 class="text-2xl font-bold mb-3">Personal Checking</h3>
-        <p class="text-gray-600 mb-4">EveryDay Checking&#8482; &mdash; $0 monthly fee, free overdraft protection, and unlimited ATM refunds nationwide.</p>
-        <ul class="text-sm text-gray-500 space-y-2 mb-6">
-          <li>&#10003; No minimum balance</li>
-          <li>&#10003; Free debit card</li>
-          <li>&#10003; Mobile check deposit</li>
-          <li>&#10003; Zelle&#174; integrated</li>
-        </ul>
-        <a href="#" class="font-bold gold-text hover:underline">Apply Now &rarr;</a>
+<div style="border-bottom:1px solid var(--border-color);background:var(--bg-secondary);">
+  <div style="max-width:1400px;margin:0 auto;padding:0 24px;display:flex;gap:32px;align-items:center;height:44px;">
+    <a href="index.html" class="nav-link">MARKETS</a>
+    <a href="about.html" class="nav-link">ABOUT</a>
+    <a href="services.html" class="nav-link active">SERVICES</a>
+    <a href="rates.html" class="nav-link">RATES</a>
+    <a href="security.html" class="nav-link">SECURITY</a>
+    <a href="contact.html" class="nav-link">CONTACT</a>
+    <div style="flex:1"></div>
+    <a href="#" class="nav-link" style="color:var(--cyan);">&#128274; SECURE LOGIN</a>
+  </div>
+</div>
+
+<section style="padding:60px 24px;border-bottom:1px solid var(--border-color);">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div class="bracket-title" style="margin-bottom:12px;">PRODUCT CATALOG</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;margin-bottom:16px;">INSTITUTIONAL & <span class="amber">RETAIL</span></div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-secondary);margin-bottom:40px;">Full-spectrum financial products for individuals, businesses, and institutions.</div>
+    
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <div class="service-card neon-border">
+        <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--amber);margin-bottom:8px;">RETAIL</div>
+        <h3 style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;margin-bottom:8px;">EveryDay Checking</h3>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--green);margin-bottom:8px;">$0</div>
+        <div style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;">No minimum balance. Unlimited ATM rebates. Zelle integrated. Free debit card.</div>
+        <a href="#" class="mono" style="font-size:11px;color:var(--amber);text-decoration:none;">OPEN ACCOUNT &rarr;</a>
       </div>
-      <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-        <div class="w-14 h-14 gold-bg rounded-2xl flex items-center justify-center text-2xl mb-6">&#128200;</div>
-        <h3 class="text-2xl font-bold mb-3">High-Yield Savings</h3>
-        <p class="text-gray-600 mb-4">Earn 4.75% APY on your savings with no account fees and automatic goal-setting tools.</p>
-        <ul class="text-sm text-gray-500 space-y-2 mb-6">
-          <li>&#10003; 4.75% APY</li>
-          <li>&#10003; No monthly fees</li>
-          <li>&#10003; FDIC insured up to $250K</li>
-          <li>&#10003; Auto-save features</li>
-        </ul>
-        <a href="#" class="font-bold gold-text hover:underline">Open Savings &rarr;</a>
+      <div class="service-card neon-border">
+        <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--cyan);margin-bottom:8px;">RETAIL</div>
+        <h3 style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;margin-bottom:8px;">High-Yield Savings</h3>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--green);margin-bottom:8px;">4.75% APY</div>
+        <div style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;">No monthly fees. FDIC insured to $250K. Auto-save and goal tracking tools.</div>
+        <a href="#" class="mono" style="font-size:11px;color:var(--amber);text-decoration:none;">OPEN ACCOUNT &rarr;</a>
       </div>
-      <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-        <div class="w-14 h-14 gold-bg rounded-2xl flex items-center justify-center text-2xl mb-6">&#127970;</div>
-        <h3 class="text-2xl font-bold mb-3">Home Mortgages</h3>
-        <p class="text-gray-600 mb-4">Fixed-rate and ARM options with competitive rates and a streamlined digital pre-approval process.</p>
-        <ul class="text-sm text-gray-500 space-y-2 mb-6">
-          <li>&#10003; Rates from 5.99% APR</li>
-          <li>&#10003; FHA, VA, Conventional</li>
-          <li>&#10003; 5% down payment options</li>
-          <li>&#10003; 90-day rate lock</li>
-        </ul>
-        <a href="#" class="font-bold gold-text hover:underline">Get Prequalified &rarr;</a>
+      <div class="service-card neon-border">
+        <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--magenta);margin-bottom:8px;">LENDING</div>
+        <h3 style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;margin-bottom:8px;">30-Yr Fixed Mortgage</h3>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--amber);margin-bottom:8px;">5.99% APR</div>
+        <div style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;">FHA/VA/Conventional. 5% down. 90-day rate lock. Digital pre-approval in minutes.</div>
+        <a href="#" class="mono" style="font-size:11px;color:var(--amber);text-decoration:none;">APPLY NOW &rarr;</a>
       </div>
-      <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-        <div class="w-14 h-14 gold-bg rounded-2xl flex items-center justify-center text-2xl mb-6">&#128663;</div>
-        <h3 class="text-2xl font-bold mb-3">Auto Loans</h3>
-        <p class="text-gray-600 mb-4">New and used auto financing with pre-approval in minutes and competitive dealer partnerships.</p>
-        <ul class="text-sm text-gray-500 space-y-2 mb-6">
-          <li>&#10003; Rates from 6.74% APR</li>
-          <li>&#10003; Terms up to 84 months</li>
-          <li>&#10003; No prepayment penalty</li>
-          <li>&#10003; EV incentive pricing</li>
-        </ul>
-        <a href="#" class="font-bold gold-text hover:underline">Apply for Auto Loan &rarr;</a>
+      <div class="service-card neon-border">
+        <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--green);margin-bottom:8px;">LENDING</div>
+        <h3 style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;margin-bottom:8px;">Auto Loan</h3>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--cyan);margin-bottom:8px;">6.74% APR</div>
+        <div style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;">New and used financing. Terms up to 84 months. No prepayment penalty. EV pricing.</div>
+        <a href="#" class="mono" style="font-size:11px;color:var(--amber);text-decoration:none;">APPLY NOW &rarr;</a>
       </div>
-      <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-        <div class="w-14 h-14 gold-bg rounded-2xl flex items-center justify-center text-2xl mb-6">&#128142;</div>
-        <h3 class="text-2xl font-bold mb-3">Wealth Management</h3>
-        <p class="text-gray-600 mb-4">Comprehensive portfolio management, estate planning, and trust services through Narmer Private Wealth.</p>
-        <ul class="text-sm text-gray-500 space-y-2 mb-6">
-          <li>&#10003; Dedicated advisor</li>
-          <li>&#10003; Tax-loss harvesting</li>
-          <li>&#10003; Estate & trust planning</li>
-          <li>&#10003; Alternative investments</li>
-        </ul>
-        <a href="#" class="font-bold gold-text hover:underline">Schedule Consultation &rarr;</a>
+      <div class="service-card neon-border">
+        <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--amber);margin-bottom:8px;">INSTITUTIONAL</div>
+        <h3 style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;margin-bottom:8px;">Business Banking</h3>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--green);margin-bottom:8px;">+ SBA Loans</div>
+        <div style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;">Business checking, merchant services, commercial lending, and treasury management.</div>
+        <a href="#" class="mono" style="font-size:11px;color:var(--amber);text-decoration:none;">OPEN BUSINESS &rarr;</a>
       </div>
-      <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-        <div class="w-14 h-14 gold-bg rounded-2xl flex items-center justify-center text-2xl mb-6">&#128188;</div>
-        <h3 class="text-2xl font-bold mb-3">Business Banking</h3>
-        <p class="text-gray-600 mb-4">Checking, credit, merchant services, and cash management solutions built for growing enterprises.</p>
-        <ul class="text-sm text-gray-500 space-y-2 mb-6">
-          <li>&#10003; Business checking & savings</li>
-          <li>&#10003; SBA & commercial loans</li>
-          <li>&#10003; Payroll integration</li>
-          <li>&#10003; Merchant services</li>
-        </ul>
-        <a href="#" class="font-bold gold-text hover:underline">Open Business Account &rarr;</a>
+      <div class="service-card neon-border">
+        <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--magenta);margin-bottom:8px;">WEALTH</div>
+        <h3 style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;margin-bottom:8px;">Private Wealth</h3>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--amber);margin-bottom:8px;">$250B AUM</div>
+        <div style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;">Dedicated advisor. Tax-loss harvesting. Estate planning. Alternative investments.</div>
+        <a href="#" class="mono" style="font-size:11px;color:var(--amber);text-decoration:none;">SCHEDULE &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="navy-bg text-gray-400 py-16 px-6 border-t border-gray-800">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-      <div>
-        <div class="flex items-center gap-3 mb-6">
-          <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div>
-          <div><div class="text-xl font-bold text-white">NARMER</div><div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div></div>
-        </div>
-        <p class="text-sm">Member FDIC. Equal Housing Lender. &copy; 2026 Narmer Financial.</p>
-      </div>
-      <div><h4 class="text-white font-bold mb-4">Personal</h4><div class="flex flex-col gap-2 text-sm"><a href="#">Checking</a><a href="#">Savings</a><a href="#">Credit Cards</a><a href="#">Mortgages</a></div></div>
-      <div><h4 class="text-white font-bold mb-4">Business</h4><div class="flex flex-col gap-2 text-sm"><a href="#">Business Checking</a><a href="#">Merchant Services</a><a href="#">Commercial Lending</a></div></div>
-      <div><h4 class="text-white font-bold mb-4">Support</h4><div class="flex flex-col gap-2 text-sm"><a href="contact.html">Contact Us</a><a href="#">Lost/Stolen Card</a><a href="#">Branch Locator</a></div></div>
+<footer style="border-top:1px solid var(--border-color);padding:48px 24px;">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;">
+      <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><div style="width:32px;height:32px;border:1.5px solid var(--amber);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:16px;color:var(--amber);">N</div><div class="mono" style="font-size:14px;font-weight:700;letter-spacing:2px;">NARMER</div></div><div class="mono" style="font-size:11px;color:var(--text-dim);line-height:1.8;">Member FDIC. Equal Housing Lender.<br>&copy; 2026 Narmer Financial Holdings Inc.</div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--amber);margin-bottom:16px;">PERSONAL</div><div style="display:flex;flex-direction:column;gap:8px;"><a href="#" class="footer-link">Checking</a><a href="#" class="footer-link">Savings</a><a href="#" class="footer-link">Credit Cards</a></div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--amber);margin-bottom:16px;">INSTITUTIONAL</div><div style="display:flex;flex-direction:column;gap:8px;"><a href="#" class="footer-link">Business Banking</a><a href="#" class="footer-link">Merchant Services</a></div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--amber);margin-bottom:16px;">SUPPORT</div><div style="display:flex;flex-direction:column;gap:8px;"><a href="contact.html" class="footer-link">Contact</a><a href="security.html" class="footer-link">Security</a></div></div>
     </div>
   </div>
 </footer>

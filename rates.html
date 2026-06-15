@@ -3,113 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Narmer Financial | Rates</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>NARMER FINANCIAL | RATES</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-* { font-family: 'Inter', sans-serif; }
-:root { --navy: #0a1628; --gold: #c9a84c; --dark-blue: #0f2744; }
-.gradient-hero { background: linear-gradient(135deg, #0a1628 0%, #0f2744 40%, #1a3a5c 100%); }
-.gold-text { color: var(--gold); }
-.gold-bg { background-color: var(--gold); }
-.navy-bg { background-color: var(--navy); }
-.rate-row { border-bottom: 1px solid #e5e7eb; }
-.rate-row:last-child { border-bottom: none; }
-.rate-row td { padding: 16px 12px; }
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>:root{--bg-primary:#0a0b1a;--bg-secondary:#10112e;--bg-card:#141538;--bg-hover:#1a1b4a;--amber:#ffb000;--green:#00c853;--red:#ff1744;--cyan:#00d4ff;--magenta:#ff2d95;--text-primary:#e8e8f0;--text-secondary:#7878a0;--text-dim:#484868;--border-color:#1e2050}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg-primary);color:var(--text-primary);font-family:'Inter',sans-serif}.mono{font-family:'JetBrains Mono',monospace}.amber{color:var(--amber)}.green{color:var(--green)}.red{color:var(--red)}.cyan{color:var(--cyan)}.text-dim{color:var(--text-dim)}.bg-card{background:var(--bg-card)}.bracket-title{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--text-secondary);letter-spacing:2px}.bracket-title::before{content:'[';color:var(--amber)}.bracket-title::after{content:']';color:var(--amber)}.nav-link{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-secondary);letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:all .2s}.nav-link:hover{color:var(--amber);border-bottom-color:var(--amber)}.nav-link.active{color:var(--amber);border-bottom-color:var(--amber)}.footer-link{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);text-decoration:none;transition:color .2s}.footer-link:hover{color:var(--amber)}.rate-table{width:100%;border-collapse:collapse;font-family:'JetBrains Mono',monospace;font-size:13px}.rate-table th{font-size:10px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;padding:12px 16px;text-align:left;border-bottom:1px solid var(--border-color);background:var(--bg-secondary)}.rate-table td{padding:14px 16px;border-bottom:1px solid var(--border-color)}.rate-table tr:hover{background:var(--bg-hover)}.rate-table tr:last-child td{border-bottom:none}
 </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
-<div class="bg-[#060e1a] text-gray-300 text-sm py-2 px-6">
-  <div class="max-w-7xl mx-auto flex justify-between items-center">
-    <div class="flex gap-6"><a href="#" class="hover:text-white">&#128179; Personal</a><a href="#" class="hover:text-white">&#128188; Business</a><a href="#" class="hover:text-white">&#128142; Wealth</a></div>
-    <div class="flex gap-4 items-center"><span class="text-gold font-semibold">Routing #: 021000322</span><a href="#" class="gold-bg text-navy font-bold px-4 py-1 rounded text-xs hover:opacity-90">ONLINE BANKING</a></div>
+<body>
+
+<div style="background:var(--bg-secondary);border-bottom:1px solid var(--border-color);padding:0 16px;">
+  <div class="mono" style="font-size:11px;color:var(--text-dim);letter-spacing:.5px;padding:6px 0;display:flex;align-items:center;gap:24px;">
+    <span class="amber">NARMER</span><span>NMS:BK</span><span class="green">&#9650; +2.34%</span><span style="flex:1"></span><span class="text-dim">06.15.2026</span><span>|</span><span class="text-dim">15:32:48 UTC</span><span>|</span><span class="amber">&#9679; LIVE</span>
   </div>
 </div>
-<nav class="navy-bg text-white sticky top-0 z-50 shadow-2xl border-b border-gray-800">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex justify-between items-center py-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div>
-        <div><div class="text-xl font-bold tracking-tight">NARMER</div><div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div></div>
-      </a>
-      <div class="hidden lg:flex space-x-8 font-medium text-sm">
-        <a href="index.html" class="hover:text-gold transition pb-1">Home</a>
-        <a href="about.html" class="hover:text-gold transition pb-1">About</a>
-        <a href="services.html" class="hover:text-gold transition pb-1">Banking</a>
-        <a href="rates.html" class="gold-text border-b-2 border-gold pb-1">Rates</a>
-        <a href="security.html" class="hover:text-gold transition pb-1">Security</a>
-        <a href="contact.html" class="hover:text-gold transition pb-1">Contact</a>
+
+<div style="background:var(--bg-primary);border-bottom:1px solid var(--border-color);padding:12px 24px;">
+  <div style="max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:42px;height:42px;border:2px solid var(--amber);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:20px;color:var(--amber);">N</div>
+      <div><div class="mono" style="font-size:18px;font-weight:700;letter-spacing:3px;">NARMER</div><div style="display:flex;gap:12px;font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);"><span>NYSE:NMR</span><span>FDIC</span><span class="amber">&#9733; BLUE CHIP</span></div></div>
+    </div>
+    <div style="text-align:right;font-family:'JetBrains Mono',monospace;"><div style="font-size:11px;color:var(--text-dim);">NYSE &#9650;</div><div style="font-size:20px;font-weight:700;color:var(--green);">$164.82</div><div style="font-size:12px;color:var(--green);">+$3.77 (+2.34%)</div></div>
+  </div>
+</div>
+
+<div style="border-bottom:1px solid var(--border-color);background:var(--bg-secondary);">
+  <div style="max-width:1400px;margin:0 auto;padding:0 24px;display:flex;gap:32px;align-items:center;height:44px;">
+    <a href="index.html" class="nav-link">MARKETS</a>
+    <a href="about.html" class="nav-link">ABOUT</a>
+    <a href="services.html" class="nav-link">SERVICES</a>
+    <a href="rates.html" class="nav-link active">RATES</a>
+    <a href="security.html" class="nav-link">SECURITY</a>
+    <a href="contact.html" class="nav-link">CONTACT</a>
+    <div style="flex:1"></div>
+    <a href="#" class="nav-link" style="color:var(--cyan);">&#128274; SECURE LOGIN</a>
+  </div>
+</div>
+
+<section style="padding:60px 24px;border-bottom:1px solid var(--border-color);">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div class="bracket-title" style="margin-bottom:12px;">INTEREST RATES</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;margin-bottom:4px;">EFFECTIVE <span class="amber">06.15.2026</span></div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);margin-bottom:40px;">All rates subject to change. APY = Annual Percentage Yield. APR = Annual Percentage Rate.</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+      <div style="background:var(--bg-card);border:1px solid var(--border-color);">
+        <div style="padding:16px;border-bottom:1px solid var(--border-color);">
+          <div class="bracket-title" style="font-size:11px;">DEPOSIT ACCOUNTS</div>
+        </div>
+        <table class="rate-table">
+          <tr><th>Product</th><th>Min Deposit</th><th>Rate</th><th class="amber">APY</th></tr>
+          <tr><td>EveryDay Checking</td><td>$0</td><td>0.01%</td><td>0.01%</td></tr>
+          <tr><td>Premier Checking</td><td>$25,000</td><td>0.05%</td><td>0.05%</td></tr>
+          <tr><td style="color:var(--amber);font-weight:600;">High-Yield Savings</td><td>$0</td><td>4.64%</td><td style="color:var(--green);font-weight:700;">4.75%</td></tr>
+          <tr><td>Money Market</td><td>$2,500</td><td>3.85%</td><td>3.92%</td></tr>
+          <tr><td>12-Month CD</td><td>$1,000</td><td>4.20%</td><td>4.28%</td></tr>
+          <tr><td>24-Month CD</td><td>$1,000</td><td>4.05%</td><td>4.13%</td></tr>
+          <tr><td>IRA Savings</td><td>$500</td><td>4.40%</td><td>4.49%</td></tr>
+        </table>
       </div>
-      <a href="#" class="gold-bg text-navy font-bold px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition">Open Account</a>
-    </div>
-  </div>
-</nav>
 
-<section class="gradient-hero text-white py-20 px-6">
-  <div class="max-w-7xl mx-auto">
-    <div class="max-w-3xl">
-      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Rates</p>
-      <h1 class="text-5xl lg:text-7xl font-black mb-6">Current <span class="gold-text">Interest Rates</span></h1>
-      <p class="text-xl text-gray-300">Rates effective as of June 15, 2026. All rates subject to change without notice. APY = Annual Percentage Yield. APR = Annual Percentage Rate.</p>
-    </div>
-  </div>
-</section>
-
-<section class="py-24 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-black text-navy mb-8">Deposit Accounts</h2>
-    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-16">
-      <table class="w-full text-left">
-        <thead class="bg-gray-50 text-navy font-bold text-sm">
-          <tr><td class="p-4">Account Type</td><td class="p-4">Minimum Deposit</td><td class="p-4">Interest Rate</td><td class="p-4">APY</td></tr>
-        </thead>
-        <tbody class="divide-y divide-gray-100">
-          <tr class="rate-row"><td class="font-semibold">EveryDay Checking&#8482;</td><td>$0</td><td>0.01%</td><td>0.01%</td></tr>
-          <tr class="rate-row"><td class="font-semibold">Premier Checking&#8482;</td><td>$25,000</td><td>0.05%</td><td>0.05%</td></tr>
-          <tr class="rate-row"><td class="font-semibold">High-Yield Savings</td><td>$0</td><td>4.64%</td><td><span class="gold-text font-bold">4.75%</span></td></tr>
-          <tr class="rate-row"><td class="font-semibold">Money Market Account</td><td>$2,500</td><td>3.85%</td><td>3.92%</td></tr>
-          <tr class="rate-row"><td class="font-semibold">12-Month CD</td><td>$1,000</td><td>4.20%</td><td>4.28%</td></tr>
-          <tr class="rate-row"><td class="font-semibold">24-Month CD</td><td>$1,000</td><td>4.05%</td><td>4.13%</td></tr>
-          <tr class="rate-row"><td class="font-semibold">IRA Savings</td><td>$500</td><td>4.40%</td><td>4.49%</td></tr>
-        </tbody>
-      </table>
+      <div style="background:var(--bg-card);border:1px solid var(--border-color);">
+        <div style="padding:16px;border-bottom:1px solid var(--border-color);">
+          <div class="bracket-title" style="font-size:11px;">LOAN PRODUCTS</div>
+        </div>
+        <table class="rate-table">
+          <tr><th>Product</th><th>Term</th><th>APR</th><th>Est. Payment</th></tr>
+          <tr><td>30-Yr Fixed Mortgage</td><td>30 yr</td><td>5.99%</td><td>$1,199 / $200K</td></tr>
+          <tr><td>15-Yr Fixed Mortgage</td><td>15 yr</td><td>5.25%</td><td>$1,607 / $200K</td></tr>
+          <tr><td>FHA Loan</td><td>30 yr</td><td>5.75%</td><td>$1,167 / $200K</td></tr>
+          <tr><td>VA Loan</td><td>30 yr</td><td>5.50%</td><td>$1,135 / $200K</td></tr>
+          <tr><td>New Auto Loan</td><td>60 mo</td><td>6.74%</td><td>$590 / $30K</td></tr>
+          <tr><td>Used Auto Loan</td><td>60 mo</td><td>7.49%</td><td>$601 / $30K</td></tr>
+          <tr><td>Home Equity Line</td><td>10 yr</td><td>7.25%</td><td>Variable</td></tr>
+        </table>
+      </div>
     </div>
 
-    <h2 class="text-3xl font-black text-navy mb-8">Loan Rates</h2>
-    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-16">
-      <table class="w-full text-left">
-        <thead class="bg-gray-50 text-navy font-bold text-sm">
-          <tr><td class="p-4">Loan Type</td><td class="p-4">Term</td><td class="p-4">Rate (APR)</td><td class="p-4">Est. Monthly Payment</td></tr>
-        </thead>
-        <tbody class="divide-y divide-gray-100">
-          <tr class="rate-row"><td class="font-semibold">30-Year Fixed Mortgage</td><td>30 years</td><td>5.99%</td><td>$1,199 / $200K</td></tr>
-          <tr class="rate-row"><td class="font-semibold">15-Year Fixed Mortgage</td><td>15 years</td><td>5.25%</td><td>$1,607 / $200K</td></tr>
-          <tr class="rate-row"><td class="font-semibold">FHA Loan</td><td>30 years</td><td>5.75%</td><td>$1,167 / $200K</td></tr>
-          <tr class="rate-row"><td class="font-semibold">VA Loan</td><td>30 years</td><td>5.50%</td><td>$1,135 / $200K</td></tr>
-          <tr class="rate-row"><td class="font-semibold">New Auto Loan</td><td>60 months</td><td>6.74%</td><td>$590 / $30K</td></tr>
-          <tr class="rate-row"><td class="font-semibold">Used Auto Loan</td><td>60 months</td><td>7.49%</td><td>$601 / $30K</td></tr>
-          <tr class="rate-row"><td class="font-semibold">Home Equity Line</td><td>10-year draw</td><td>7.25%</td><td>Variable</td></tr>
-          <tr class="rate-row"><td class="font-semibold">Personal Loan</td><td>36 months</td><td>9.99%</td><td>$323 / $10K</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="p-8 rounded-2xl bg-yellow-50 border border-yellow-200 text-center">
-      <p class="text-lg font-bold text-navy">&#128161; Rate Alerts</p>
-      <p class="text-gray-600">Sign up to receive notifications when rates change or when new promotional rates become available.</p>
-      <a href="#" class="mt-4 inline-block gold-bg text-navy font-bold px-6 py-3 rounded-xl hover:opacity-90 transition">Subscribe to Rate Alerts</a>
+    <div style="margin-top:32px;padding:20px;background:var(--bg-card);border:1px solid var(--border-color);display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);">ALERTS</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-secondary);">Subscribe to receive notifications when rates change.</div>
+      </div>
+      <a href="#" class="mono" style="font-size:11px;color:var(--bg-primary);background:var(--amber);padding:10px 24px;text-decoration:none;letter-spacing:1px;">SUBSCRIBE</a>
     </div>
   </div>
 </section>
 
-<footer class="navy-bg text-gray-400 py-16 px-6 border-t border-gray-800">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-      <div><div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div><div><div class="text-xl font-bold text-white">NARMER</div><div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div></div></div><p class="text-sm">Member FDIC. &copy; 2026 Narmer Financial.</p></div>
-      <div><h4 class="text-white font-bold mb-4">Rates</h4><div class="flex flex-col gap-2 text-sm"><a href="#">Deposit Rates</a><a href="#">Mortgage Rates</a><a href="#">Auto Loan Rates</a><a href="#">CD Rates</a></div></div>
-      <div><h4 class="text-white font-bold mb-4">Resources</h4><div class="flex flex-col gap-2 text-sm"><a href="#">Rate Calculator</a><a href="#">Mortgage Calculator</a><a href="#">Savings Goal Tool</a></div></div>
-      <div><h4 class="text-white font-bold mb-4">Support</h4><div class="flex flex-col gap-2 text-sm"><a href="contact.html">Contact Us</a><a href="#">Branch Locator</a></div></div>
+<footer style="border-top:1px solid var(--border-color);padding:48px 24px;">
+  <div style="max-width:1400px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;">
+      <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><div style="width:32px;height:32px;border:1.5px solid var(--amber);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:16px;color:var(--amber);">N</div><div class="mono" style="font-size:14px;font-weight:700;letter-spacing:2px;">NARMER</div></div><div class="mono" style="font-size:11px;color:var(--text-dim);line-height:1.8;">Member FDIC. &copy; 2026 Narmer Financial Holdings Inc.</div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--amber);margin-bottom:16px;">RATES</div><div style="display:flex;flex-direction:column;gap:8px;"><a href="#" class="footer-link">Deposit Rates</a><a href="#" class="footer-link">Mortgage Rates</a><a href="#" class="footer-link">Auto Rates</a></div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--amber);margin-bottom:16px;">TOOLS</div><div style="display:flex;flex-direction:column;gap:8px;"><a href="#" class="footer-link">Mortgage Calculator</a><a href="#" class="footer-link">Savings Goal Tool</a></div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--amber);margin-bottom:16px;">SUPPORT</div><div style="display:flex;flex-direction:column;gap:8px;"><a href="contact.html" class="footer-link">Contact</a><a href="security.html" class="footer-link">Security</a></div></div>
     </div>
   </div>
 </footer>
