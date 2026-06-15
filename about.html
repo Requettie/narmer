@@ -1,110 +1,192 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-white text-gray-800 font-serif">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Narmer Financial | About Us</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { font-family: 'Inter', sans-serif; }
+:root { --navy: #0a1628; --gold: #c9a84c; --dark-blue: #0f2744; --light-navy: #132e4a; }
+.gradient-hero { background: linear-gradient(135deg, #0a1628 0%, #0f2744 40%, #1a3a5c 100%); }
+.gold-text { color: var(--gold); }
+.gold-bg { background-color: var(--gold); }
+.navy-bg { background-color: var(--navy); }
+.timeline-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--gold); position: absolute; left: -8px; top: 4px; }
+.team-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px -8px rgba(0,0,0,0.15); }
+</style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Narmer Financial | About</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            .brand-bg { background-color: #4c1d95; }
-            .brand-text { color: #4c1d95; }
-            .brand-border { border-color: #4c1d95; }
-            .accent-bg { background-color: #c084fc; }
-            .accent-text { color: #c084fc; }
-        </style>
-    </head>
-    
-<body class="bg-white text-gray-900">
-    
-    <nav class="p-6 flex justify-between items-center sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm">
-        <a href="index.html" class="text-2xl font-bold" style="color: #4c1d95">Narmer Financial</a>
-        <div class="hidden md:flex space-x-8 font-medium">
-            <a href="index.html" class="hover:opacity-70">Home</a>
-            <a href="about.html" class="hover:opacity-70">About</a>
-            <a href="services.html" class="hover:opacity-70">Services</a>
-            <a href="contact.html" class="hover:opacity-70">Contact</a>
+<!-- Top Bar -->
+<div class="bg-[#060e1a] text-gray-300 text-sm py-2 px-6">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="flex gap-6">
+      <a href="#" class="hover:text-white">&#128179; Personal</a>
+      <a href="#" class="hover:text-white">&#128188; Business</a>
+      <a href="#" class="hover:text-white">&#128142; Wealth</a>
+    </div>
+    <div class="flex gap-4 items-center">
+      <span class="text-gold font-semibold">Routing #: 021000322</span>
+      <a href="#" class="gold-bg text-navy font-bold px-4 py-1 rounded text-xs hover:opacity-90">ONLINE BANKING</a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Navigation -->
+<nav class="navy-bg text-white sticky top-0 z-50 shadow-2xl border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div>
+        <div>
+          <div class="text-xl font-bold tracking-tight">NARMER</div>
+          <div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div>
         </div>
-    </nav>
-    
-    
-        <main class="py-24 px-6">
-            <div class="max-w-4xl mx-auto text-center mb-20">
-                <h1 class="text-5xl font-bold mb-6 brand-text">Defining the Future</h1>
-                <p class="text-xl text-gray-600">Bespoke wealth management for the visionaries. Our mission is to empower industries through unprecedented efficiency and innovation.</p>
-            </div>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-                <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-                    <div class="text-3xl mb-4">???</div>
-                    <h3 class="text-xl font-bold mb-2">Our Heritage</h3>
-                    <p class="text-gray-600">Built on a foundation of integrity and technical mastery.</p>
-                </div>
-                <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-                    <div class="text-3xl mb-4">??</div>
-                    <h3 class="text-xl font-bold mb-2">Our Vision</h3>
-                    <p class="text-gray-600">To create a world where technology and nature coexist in harmony.</p>
-                </div>
-                <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-                    <div class="text-3xl mb-4">??</div>
-                    <h3 class="text-xl font-bold mb-2">Our Growth</h3>
-                    <p class="text-gray-600">Expanding globally to bring our solutions to every continent.</p>
-                </div>
-            </div>
-        </main>
-        
-    
-    <footer class="bg-gray-900 text-white py-12 px-6 text-center">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl font-bold mb-4" style="color: #c084fc">Narmer Financial</h3>
-            <p class="text-gray-400 mb-6">Bespoke wealth management for the visionaries.</p>
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="hover:text-white">LinkedIn</a>
-                <a href="#" class="hover:text-white">Twitter</a>
-                <a href="#" class="hover:text-white">Instagram</a>
-            </div>
-            <p class="text-sm text-gray-500">&copy; 2026 Narmer Financial. All Rights Reserved.</p>
+      </a>
+      <div class="hidden lg:flex space-x-8 font-medium text-sm">
+        <a href="index.html" class="hover:text-gold transition pb-1">Home</a>
+        <a href="about.html" class="gold-text border-b-2 border-gold pb-1">About</a>
+        <a href="services.html" class="hover:text-gold transition pb-1">Banking</a>
+        <a href="rates.html" class="hover:text-gold transition pb-1">Rates</a>
+        <a href="security.html" class="hover:text-gold transition pb-1">Security</a>
+        <a href="contact.html" class="hover:text-gold transition pb-1">Contact</a>
+      </div>
+      <a href="#" class="gold-bg text-navy font-bold px-6 py-2.5 rounded-lg text-sm hover:opacity-90 transition">Open Account</a>
+    </div>
+  </div>
+</nav>
+
+<!-- About Hero -->
+<section class="gradient-hero text-white py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-3xl">
+      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">About Us</p>
+      <h1 class="text-5xl lg:text-7xl font-black mb-6">125 Years of <span class="gold-text">Financial Leadership</span></h1>
+      <p class="text-xl text-gray-300 leading-relaxed">Founded in 1897, Narmer Financial has grown from a single storefront in Boston to one of the largest and most trusted financial institutions in the United States.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Values -->
+<section class="py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-3 gap-12 mb-24">
+      <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100">
+        <div class="text-4xl mb-4">&#128200;</div>
+        <h3 class="text-2xl font-bold mb-3">Our Mission</h3>
+        <p class="text-gray-600">To empower individuals, families, and businesses to achieve financial prosperity through trust, innovation, and personalized service.</p>
+      </div>
+      <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100">
+        <div class="text-4xl mb-4">&#128077;</div>
+        <h3 class="text-2xl font-bold mb-3">Our Values</h3>
+        <p class="text-gray-600">Integrity, accountability, community, and excellence drive every decision we make and every relationship we build.</p>
+      </div>
+      <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100">
+        <div class="text-4xl mb-4">&#127758;</div>
+        <h3 class="text-2xl font-bold mb-3">Our Impact</h3>
+        <p class="text-gray-600">$2.5B invested in community development, 1.2M hours of employee volunteer service, and a commitment to net-zero operations by 2040.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="py-24 px-6 bg-gray-50">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Our History</p>
+      <h2 class="text-4xl font-black text-navy mb-4">The Narmer Timeline</h2>
+    </div>
+    <div class="space-y-12">
+      <div class="relative pl-8 border-l-2 border-gold">
+        <div class="timeline-dot"></div>
+        <p class="text-sm gold-text font-bold">1897</p>
+        <h3 class="text-xl font-bold">The Beginning</h3>
+        <p class="text-gray-600">Alistair Narmer opens the Boston Savings & Trust Company in a small storefront on State Street with $15,000 in capital.</p>
+      </div>
+      <div class="relative pl-8 border-l-2 border-gold">
+        <div class="timeline-dot"></div>
+        <p class="text-sm gold-text font-bold">1929</p>
+        <h3 class="text-xl font-bold">The Great Depression</h3>
+        <p class="text-gray-600">While hundreds of banks failed, Narmer remained solvent by maintaining conservative lending practices and depositor confidence.</p>
+      </div>
+      <div class="relative pl-8 border-l-2 border-gold">
+        <div class="timeline-dot"></div>
+        <p class="text-sm gold-text font-bold">1972</p>
+        <h3 class="text-xl font-bold">National Expansion</h3>
+        <p class="text-gray-600">Narmer goes public on the NYSE and begins its expansion across the Eastern Seaboard, opening 200 branches in 15 states.</p>
+      </div>
+      <div class="relative pl-8 border-l-2 border-gold">
+        <div class="timeline-dot"></div>
+        <p class="text-sm gold-text font-bold">2004</p>
+        <h3 class="text-xl font-bold">Digital Revolution</h3>
+        <p class="text-gray-600">Launch of Narmer Online Banking, becoming one of the first major banks to offer full digital account management.</p>
+      </div>
+      <div class="relative pl-8 border-l-2 border-gold">
+        <div class="timeline-dot"></div>
+        <p class="text-sm gold-text font-bold">2026</p>
+        <h3 class="text-xl font-bold">Today & Beyond</h3>
+        <p class="text-gray-600">Serving 15 million customers across 4,200 branches with $220B in assets, Narmer continues to lead with AI-driven banking and wealth management innovation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Leadership -->
+<section class="py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="gold-text font-semibold text-sm tracking-widest uppercase mb-3">Leadership</p>
+      <h2 class="text-4xl font-black text-navy mb-4">Our Executive Team</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center transition">
+        <div class="w-24 h-24 bg-navy rounded-full mx-auto mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover" /></div>
+        <h4 class="font-bold text-lg">Alistair Narmer IV</h4>
+        <p class="text-sm gold-text font-semibold">Chairman & CEO</p>
+        <p class="text-xs text-gray-500 mt-2">40 years of banking leadership</p>
+      </div>
+      <div class="team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center transition">
+        <div class="w-24 h-24 bg-navy rounded-full mx-auto mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover" /></div>
+        <h4 class="font-bold text-lg">Catherine Walsh</h4>
+        <p class="text-sm gold-text font-semibold">President & COO</p>
+        <p class="text-xs text-gray-500 mt-2">Former Treasury Undersecretary</p>
+      </div>
+      <div class="team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center transition">
+        <div class="w-24 h-24 bg-navy rounded-full mx-auto mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover" /></div>
+        <h4 class="font-bold text-lg">James Hartfield</h4>
+        <p class="text-sm gold-text font-semibold">CFO</p>
+        <p class="text-xs text-gray-500 mt-2">25 years in institutional finance</p>
+      </div>
+      <div class="team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center transition">
+        <div class="w-24 h-24 bg-navy rounded-full mx-auto mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover" /></div>
+        <h4 class="font-bold text-lg">Dr. Maria Santos</h4>
+        <p class="text-sm gold-text font-semibold">CTO</p>
+        <p class="text-xs text-gray-500 mt-2">AI & Digital Transformation leader</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="navy-bg text-gray-400 py-16 px-6 border-t border-gray-800">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center text-navy font-black text-xl">N</div>
+          <div><div class="text-xl font-bold text-white">NARMER</div><div class="text-[10px] tracking-[0.2em] gold-text uppercase font-semibold -mt-1">Financial</div></div>
         </div>
-    </footer>
-    
-    <script>
-        const backendUrl = "http://localhost:5000/api/contact";
-        const form = document.getElementById('contact-form');
-        if (form) {
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const btn = form.querySelector('button');
-                const originalText = btn.innerText;
-                btn.disabled = true;
-                btn.innerText = 'Sending...';
-
-                const data = {
-                    brandId: 'narmer-financial',
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    message: document.getElementById('message').value
-                };
-
-                try {
-                    const response = await fetch(backendUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(data)
-                    });
-                    const result = await response.json();
-                    if (result.success) {
-                        alert('Success: ' + result.message);
-                        form.reset();
-                    } else {
-                        alert('Error: ' + (result.errors ? result.errors[0].msg : result.message));
-                    }
-                } catch (error) {
-                    alert('Error connecting to server. Please try again later.');
-                } finally {
-                    btn.disabled = false;
-                    btn.innerText = originalText;
-                }
-            });
-        }
-    </script>
+        <p class="text-sm">Member FDIC. Equal Housing Lender. &copy; 2026 Narmer Financial.</p>
+      </div>
+      <div class="footer-links"><h4 class="text-white font-bold mb-4">Personal</h4><div class="flex flex-col gap-2 text-sm"><a href="#">Checking</a><a href="#">Savings</a><a href="#">Credit Cards</a><a href="#">Mortgages</a><a href="#">Auto Loans</a></div></div>
+      <div class="footer-links"><h4 class="text-white font-bold mb-4">Business</h4><div class="flex flex-col gap-2 text-sm"><a href="#">Business Checking</a><a href="#">Merchant Services</a><a href="#">Commercial Lending</a><a href="#">Payroll</a><a href="#">Treasury Management</a></div></div>
+      <div class="footer-links"><h4 class="text-white font-bold mb-4">Support</h4><div class="flex flex-col gap-2 text-sm"><a href="contact.html">Contact Us</a><a href="#">Lost/Stolen Card</a><a href="#">Dispute a Transaction</a><a href="#">Branch Locator</a><a href="#">Privacy Policy</a></div></div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
